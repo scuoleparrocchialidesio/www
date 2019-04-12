@@ -5,11 +5,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <%= stylesheet_link_tag "site" %>
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>
     </title>
   </head>
   <body>
-    <%= yield %>
+    <header>The header</header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>The footer</footer>
   </body>
 </html>
