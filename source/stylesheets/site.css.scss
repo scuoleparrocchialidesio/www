@@ -1,5 +1,5 @@
 html,body{
-      height: 100%;
+  height: 100%;
 }
 
 body {
@@ -17,14 +17,73 @@ body {
 }
 
 header {
+  grid-template-columns: 1fr auto;
   grid-area: header;
 }
 
 footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row: auto;
   grid-area: footer;
+  background-color: #505151;
 }
 
-header,
-footer{
-  background-color: lightgrey;
+main {
+  margin: 15px;
+}
+
+a:link {
+  color: #282A2E;
+  text-decoration: none;
+}
+
+.homepage:visited,
+.le_scuole:visited,
+.esploratori:visited {
+  color: #282A2E;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.homepage {
+  font-size: 15px;
+  margin-right: 1em;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  padding: 2em;
+}
+
+.esploratori, {
+  float: right;
+}
+
+.footer--information{
+  text-align: center;
+  margin: 10px;
+  font-size: 10px;
+  color: #FFFFFF
+}
+
+.footer--link {
+  text-align: center;
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+.title {
+  font-family: 'Noto Serif', serif;
+  font-size: 15px;
+  padding-top: 2em;
+}
+
+.text {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: justify;
+  font-size: 11px;
 }

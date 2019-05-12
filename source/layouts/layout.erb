@@ -6,15 +6,39 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <%= stylesheet_link_tag "site" %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>
     </title>
   </head>
   <body>
-    <header>The header</header>
+    <header>
+      <img src="images/logo.png" class="logo">
+      <a class="homepage" href="/index.html"> Scuole parrocchiali Desio</a>
+      <a class="le_scuole"href="/le_scuole.html">Le scuole</a>
+      <a class="esploratori"href="/esploratori.html">Esploratori</a>
+    </header>
     <main>
       <%= yield %>
     </main>
-    <footer>The footer</footer>
+    <footer>
+      <div class="footer--information">
+        <p>
+          Esempio:<br>
+          Via Conciliazione, 9 - 20832 Desio(MB)<br>
+          Tel. e Fax 0362 622042<br>
+          materna.sangiuseppe@tiscali.it
+        </p>
+      </div>
+      <div class="footer--link">
+        <a class="footer--link__one"href="/scuole_in_chiaro.html">
+          Scuola in chiaro
+        </a>
+        <a class="footer--link__two"href="link-direct-download">
+          Calendario giorni festivi
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
