@@ -1,4 +1,4 @@
-html,body{
+html {
   height: 100%;
 }
 
@@ -12,19 +12,21 @@ body {
                  "header"
                  "main"
                  "footer";
-  grid-template-rows: 100px 1fr 80px;
+  grid-template-rows: 100px 1fr 100px;
   text-align: center;
 }
 
 header {
-  grid-template-columns: 1fr auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-area: header;
 }
 
 footer {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-row: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr;
   grid-area: footer;
   background-color: #505151;
 }
@@ -49,31 +51,40 @@ a:hover {
 }
 
 .homepage {
-  font-size: 15px;
-  margin-right: 1em;
+  font-size: 25px;
+  font-family: 'Noto Serif', serif;
+  margin-top: 1em;
 }
 
 .logo {
+  display: grid;
   width: 50px;
   height: auto;
   padding: 2em;
 }
 
-.esploratori, {
-  float: right;
+.esploratori {
 }
 
 .footer--information{
   text-align: center;
-  margin: 10px;
+  margin: 15px;
   font-size: 10px;
   color: #FFFFFF
 }
 
 .footer--link {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 15px;
   text-align: center;
   font-size: 10px;
   color: #FFFFFF;
+}
+
+.footer--link__one,
+.footer--link__two {
+  margin-top: 15px;
 }
 
 .title {
@@ -84,6 +95,6 @@ a:hover {
 
 .text {
   font-family: 'Noto Sans', sans-serif;
-  text-align: justify;
   font-size: 11px;
+  text-align: center;
 }
