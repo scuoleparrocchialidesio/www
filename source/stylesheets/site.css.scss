@@ -1,5 +1,10 @@
-html {
+* {
+  box-sizing: border-box;
+}
+
+html,body {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -14,7 +19,7 @@ body {
             "breadcrumb"
             "main"
             "footer";
-  grid-template-rows: 100px 10px 30px 1fr 100px;
+  grid-template-rows: 100px auto auto 1fr 100px;
 }
 
 header {
@@ -30,7 +35,6 @@ header {
 .homepage {
   font-size: 25px;
   font-family: 'Noto Serif', serif;
-  margin-top: 5px;
 }
 
 .logo {
@@ -41,12 +45,13 @@ header {
 }
 
 .menu {
-  display: grid;
-  grid-template-columns: 200px 200px;
-  grid-gap: 2rem;
-  text-align: center;
   justify-content: center;
+  padding: 2rem;
+  grid-gap: 1rem;
+  display: grid;
+   grid-template-columns: auto auto;
 }
+
 
 a:link {
   color: #282A2E;
@@ -101,7 +106,7 @@ a:hover {
 }
 
 
-main {
+.main {
   display: grid;
   margin-left: auto;
   margin-right: auto;
@@ -120,16 +125,11 @@ main {
 
 footer {
   display: grid;
-  grid-template-columns: 200px  200px;
-  grid-row: 1fr;
+  grid-template-columns: 200px 200px;
   grid-area: footer;
   background-color: #505151;
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  right:0px;
-  margin-bottom:0px;
   justify-content: center;
+
 }
 
 
