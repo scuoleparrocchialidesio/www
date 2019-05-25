@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
 }
 
 html,body {
@@ -12,14 +11,15 @@ html,body {
 body {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1fr;
+  grid-template-columns:  1fr;
   grid-template-areas:
             "header"
             "menu"
             "breadcrumb"
+            "dash"
             "main"
             "footer";
-  grid-template-rows: auto auto 30px 1fr auto;
+  grid-template-rows: auto auto 30px auto 1fr auto;
   min-height: 100%;
   justify-items: center;
 }
@@ -49,9 +49,9 @@ header {
 .menu {
   justify-content: center;
   padding: 2rem;
-  grid-gap: 1rem;
+  grid-gap: 5rem;
   display: grid;
-   grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
 }
 
 
@@ -72,19 +72,17 @@ a:hover {
 
 .breadcrumb ul {
   list-style: none;
-  text-align: left;
+  margin-right: 2rem;
   display: grid;
   grid-template-rows: 25px;
-  grid-template-columns: repeat(8, 70px);
-  border-style: solid;
-  border-width: 1px;
-  border-color: lightgrey;
+  grid-template-columns: auto auto auto auto;
   align-items: center;
 }
 
 .breadcrumb li {
   display: inline-block;
   font-size: 15px;
+  margin: 5px;
 }
 
 .breadcrumb li+li:before {
@@ -107,10 +105,17 @@ a:hover {
   text-decoration: underline;
 }
 
+.dash{
+  border: 1px solid lightgrey;
+  width: 35%;
+  height: 0px;
+  margin-bottom: 2rem;
+}
 
 .main {
   display: grid;
-
+  align-items: center;
+  margin: 1rem;
 }
 
 .title {
@@ -121,12 +126,15 @@ a:hover {
 
 .text {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 11px;
+  font-size: 13px;
+}
+.gallery{
+  object-fit: cover;
 }
 
 footer {
   display: grid;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: auto auto;
   grid-area: footer;
   background-color: #505151;
   justify-content: center;
@@ -138,12 +146,16 @@ footer {
 .footer--link__two:visited {
   color: #FFFFFF
 }
+.footer--link__one,
+.footer--link__two a{
+    color: #FFFFFF
+}
 
 .footer--information{
   text-align: center;
   left: 50px;
   font-size: 10px;
-  margin-top: 1rem;
+  margin-top: 10px;
   color: #FFFFFF
 }
 
@@ -151,6 +163,7 @@ footer {
   display: grid;
   grid-template-rows: auto 1fr;
   padding: 15px;
+  margin-top: 10px;
   text-align: center;
   font-size: 10px;
   color: #FFFFFF;
@@ -158,5 +171,5 @@ footer {
 
 .footer--link__one,
 .footer--link__two {
-  margin-top: 15px;
+  margin-top: auto;
 }
