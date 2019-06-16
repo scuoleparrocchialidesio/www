@@ -30,4 +30,21 @@
       </a>
     </div>
   </div>
+  <div id="map"></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoib2xpc3RpayIsImEiOiJjaW03a2lvd2MwMDBsdzhtNTZzeG9pYzFsIn0.EnuMVTEKyFfJN6XZhtLmIA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/olistik/cjwz2na0u0fbj1cn5k04p4rzy',
+      center: [9.207719, 45.617772], // starting position [lng, lat]
+      zoom: 12.453748326689462,
+    });
+    // disable map zoom when using scroll
+    map.scrollZoom.disable();
+    var boundingBox = [
+      [9.24872585278814, 45.62608006006212],
+      [9.168509906896816, 45.599777925198964]
+    ]
+    map.fitBounds(boundingBox)
+  </script>
 </section>
