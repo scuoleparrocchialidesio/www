@@ -1,7 +1,10 @@
+$content-width: 40rem;
+
 * {
+  box-sizing: border-box;
 }
 
-html,body {
+html, body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -10,59 +13,99 @@ html,body {
 
 body {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns:  1fr;
-  grid-template-areas:
-            "header"
-            "menu"
-            "breadcrumb"
-            "dash"
-            "main"
-            "footer";
-  grid-template-rows: auto auto 30px auto 1fr auto;
+  align-items: start;
+  grid-template-rows: auto 1fr auto;
   min-height: 100%;
-  justify-items: center;
 }
 
 header {
-  grid-area: header;
+  margin: 2rem;
+  font-size: 1.5rem;
   display: grid;
-  grid-template-columns: auto auto;
+  justify-items: center;
+  grid-gap: 1.5rem;
+}
+
+.header-brand {
+  grid-column: 1 / 3;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-left: 0;
-  right: 0;
+  justify-content: space-evenly;
 }
 
-.homepage {
-  font-size: 25px;
-  font-family: 'Noto Serif', serif;
+.header-brand__link {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
-.logo {
+.header-link {
+  grid-column: 1 / 3;
+  text-transform: uppercase;
+}
+
+@media (min-width: 440px) {
+  .header-brand {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .header-link {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  header {
+    align-items: center;
+  }
+
+  .header-brand {
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2 / 3;
+  }
+
+  .header-link {
+    grid-row: 1;
+  }
+}
+
+.main {
   display: grid;
-  max-width: 70px;
-  height: auto;
-  padding: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, $content-width) minmax(0, 1fr);
+  margin: 2rem;
 }
 
-.menu {
-  justify-content: center;
-  padding: 2rem;
-  grid-gap: 5rem;
-  display: grid;
-  grid-template-columns: auto auto;
+.breadcrumbs,
+.page-content {
+  grid-column: 2;
 }
-
 
 a:link {
   color: #282A2E;
   text-decoration: none;
 }
 
-.homepage:visited,
-.le_scuole:visited,
-.esploratori:visited {
+.header-brand__link {
+  font-size: 25px;
+  font-family: 'Noto Serif', serif;
+}
+
+.header-brand__logo {
+  width: 70px;
+  margin: 1rem;
+}
+
+.header-link--laboratories {
+}
+
+.header-link--schools {
+}
+
+.header-brand__link:visited,
+.header-link:visited {
   color: #282A2E;
 }
 
@@ -70,52 +113,37 @@ a:hover {
   text-decoration: underline;
 }
 
-.breadcrumb ul {
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
   list-style: none;
-  margin-right: 2rem;
-  display: grid;
-  grid-template-rows: 25px;
-  grid-template-columns: auto auto auto auto;
-  align-items: center;
+  list-style-type: none;
 }
 
-.breadcrumb li {
+.breadcrumbs li {
   display: inline-block;
   font-size: 15px;
-  margin: 5px;
 }
 
-.breadcrumb li+li:before {
+.breadcrumbs li:before {
   color: black;
   content: ">\00a0";
 }
 
-.breadcrumb li a {
+.breadcrumbs li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.breadcrumbs li a:visited {
   text-decoration: none;
   color: black;
 }
 
-.breadcrumb li a:visited{
-  text-decoration: none;
-  color: black;
-}
-
-.breadcrumb li a:hover {
+.breadcrumbs li a:hover {
   color: black;
   text-decoration: underline;
-}
-
-.dash{
-  border: 1px solid lightgrey;
-  width: 35%;
-  height: 0px;
-  margin-bottom: 2rem;
-}
-
-.main {
-  display: grid;
-  align-items: center;
-  margin: 1rem;
 }
 
 .title {
@@ -128,48 +156,34 @@ a:hover {
   font-family: 'Noto Sans', sans-serif;
   font-size: 13px;
 }
-.gallery{
+
+.gallery {
   object-fit: cover;
 }
 
 footer {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-area: footer;
   background-color: #505151;
-  justify-content: center;
-  width: 100%;
-}
-
-
-.footer--link__one:visited,
-.footer--link__two:visited {
-  color: #FFFFFF
-}
-.footer--link__one,
-.footer--link__two a{
-    color: #FFFFFF
-}
-
-.footer--information{
+  padding: 1rem;
   text-align: center;
-  left: 50px;
-  font-size: 10px;
-  margin-top: 10px;
-  color: #FFFFFF
 }
 
-.footer--link {
+.footer-wrapper {
   display: grid;
-  grid-template-rows: auto 1fr;
-  padding: 15px;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 10px;
-  color: #FFFFFF;
+  grid-gap: 1rem;
 }
 
-.footer--link__one,
-.footer--link__two {
-  margin-top: auto;
+.footer-item {
+  display: block;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  footer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, $content-width) minmax(0, 1fr);
+  }
+  .footer-wrapper {
+    grid-column: 2;
+    grid-template-columns: 1fr 1fr;
+  }
 }

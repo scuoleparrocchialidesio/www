@@ -14,36 +14,32 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.png" class="logo">
-      <a class="homepage" href="/index.html"> Scuole parrocchiali Desio</a>
+      <div class="header-brand">
+        <img src="images/logo.png" class="header-brand__logo">
+        <a class="header-brand__link" href="/">Scuole Parrocchiali Desio</a>
+      </div>
+      <a class="header-link header-link--schools"href="/le_scuole.html">Le scuole</a>
+      <a class="header-link header-link--laboratories"href="/esploratori.html">Esploratori</a>
     </header>
-    <div class="menu">
-      <a class="le_scuole"href="/le_scuole.html">Le scuole</a>
-      <a class="esploratori"href="/esploratori.html">Esploratori</a>
-    </div>
-    <div class="breadcrumb">
-      <ul>
+    <main class="main">
+      <ul class="breadcrumbs">
         <li><a href="/index.html">Home</a></li>
       </ul>
-    </div>
-    <div class="dash"></div>
-    <main class="main">
-      <%= yield %>
+      <div class="page-content">
+        <%= yield %>
+      </div>
     </main>
     <footer>
-      <div class="footer--information">
-        <p>
-          Esempio:<br>
-          Via Conciliazione, 9 - 20832 Desio(MB)<br>
-          Tel. e Fax 0362 622042<br>
-          materna.sangiuseppe@tiscali.it
+      <div class="footer-wrapper">
+        <p class="footer-item">
+          Via Conciliazione, 9 - 20832 Desio(MB)<br />
+          Tel./Fax 0362 622042
         </p>
-      </div>
-      <div class="footer--link">
-        <a class="footer--link__one"href="/scuole_in_chiaro.html">
+        <a class="footer-item" href="mailto:materna.sangiuseppe@tiscali.it">materna.sangiuseppe@tiscali.it</a>
+        <a class="footer-item" href="/scuole_in_chiaro.html">
           Scuola in chiaro
         </a>
-        <a class="footer--link__two"href="link-direct-download">
+        <a class="footer-item" href="link-direct-download">
           Calendario giorni festivi
         </a>
       </div>
