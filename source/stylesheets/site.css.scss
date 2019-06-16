@@ -84,7 +84,6 @@ header {
 }
 
 a:link {
-  color: #282A2E;
   text-decoration: none;
 }
 
@@ -156,6 +155,27 @@ a:hover {
   font-family: 'Noto Sans', sans-serif;
   font-size: 13px;
 }
+.useful_link a:visited,
+.useful_link a:link{
+  color:#282A2E;
+}
+.usefull-link--item-one {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-top: 2rem;
+}
+.usefull-link--item-two {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  float: right;
+  flex-direction: row-reverse;
+}
+.document-icon {
+  width:50px;
+  height: auto;
+}
 
 .gallery {
   object-fit: cover;
@@ -171,12 +191,15 @@ footer {
 .footer-wrapper {
   display: grid;
   grid-gap: 1rem;
+  color: white;
 }
 
 .footer-item {
   display: block;
   margin: 0;
+  color: white;
 }
+
 
 @media (min-width: 600px) {
   footer {
