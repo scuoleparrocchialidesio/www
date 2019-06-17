@@ -100,10 +100,14 @@ a:link {
   margin: 1rem;
 }
 
-.header-link--laboratories {
+.header-link--laboratories:visited,
+.header-link--schools:visited {
+  color: #282A2E;
 }
 
-.header-link--schools {
+.header-link--laboratories a,
+.header-link--schools a {
+  color: #282A2E;
 }
 
 .header-brand__link:visited,
