@@ -1,7 +1,8 @@
-// Variables
+
 $content-width: 40rem;
 $breakpoint-xs: 440px;
 $breakpoint-sm: 600px;
+$font-color: #282A2E
 
 * {
   box-sizing: border-box;
@@ -102,17 +103,17 @@ a:link {
 
 .header-link--laboratories:visited,
 .header-link--schools:visited {
-  color: #282A2E;
+  color: $font-color;
 }
 
 .header-link--laboratories:link,
 .header-link--schools:link {
-  color: #282A2E;
+  color: $font-color;
 }
 
 .header-brand__link:visited,
 .header-link:visited {
-  color: #282A2E;
+  color: $font-color;
 }
 
 a:hover {
@@ -124,6 +125,7 @@ a:hover {
   padding: 0;
   list-style: none;
   list-style-type: none;
+  font-family: 'Noto Serif', sans-serif;
 }
 
 .breadcrumbs li {
@@ -164,7 +166,7 @@ a:hover {
 }
 .documents-list a:visited,
 .documents-list a:link{
-  color:#282A2E;
+  color: $font-color;
 }
 .documents-list {
   display: flex;
@@ -200,6 +202,7 @@ footer {
 }
 
 .footer-wrapper {
+  font-family: 'Noto Serif', sans-serif;
   display: grid;
   grid-gap: 1rem;
   color: white;
