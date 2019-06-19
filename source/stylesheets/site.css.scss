@@ -225,15 +225,27 @@ footer {
   }
 }
 
-.school-index{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 15px;
-  min-width: 100px;
-  height: auto;
-  border: solid 2px #E2E2E2;
+.card {
+  border: 3px solid #505151;
+  border-radius: 2px;
   padding: 1rem;
+  margin-top: 2rem;
+  a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Noto serif';
+    margin: 0;
+    padding: 0;
+  }
+  figure {
+    margin: 0;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 }
+
 .school-link {
   display: block;
   text-align: center;
@@ -243,6 +255,7 @@ footer {
 .school-link:visited {
   color: $font-color;
 }
+
 
 #map {
   width: 100%;
