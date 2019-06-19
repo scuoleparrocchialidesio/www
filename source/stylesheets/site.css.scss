@@ -225,6 +225,25 @@ footer {
   }
 }
 
+.school-index{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  min-width: 100px;
+  height: auto;
+  border: solid 2px #E2E2E2;
+  padding: 1rem;
+}
+.school-link {
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+.school-link:link,
+.school-link:visited {
+  color: $font-color;
+}
+
 #map {
   width: 100%;
   height: 300px;
