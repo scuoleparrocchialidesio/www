@@ -143,12 +143,12 @@ a:hover {
   color: black;
 }
 
-.breadcrumbs :visited {
+.breadcrumbs a:visited {
   text-decoration: none;
   color: black;
 }
 
-.breadcrumbs :hover {
+.breadcrumbs a:hover {
   color: black;
   text-decoration: underline;
 }
