@@ -3,6 +3,8 @@ $content-width: 40rem;
 $breakpoint-xs: 440px;
 $breakpoint-sm: 600px;
 $font-color: #282A2E;
+$description: white;
+$background-footer: #505151;
 
 * {
   box-sizing: border-box;
@@ -82,7 +84,6 @@ header {
   margin: 2rem;
 }
 
-.breadcrumbs,
 .page-content {
   grid-column: 2;
 }
@@ -141,16 +142,16 @@ a:hover {
 .breadcrumbs li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
+  color: $font-color;
 }
 
-.breadcrumbs li a:visited {
+.breadcrumbs a:visited {
   text-decoration: none;
-  color: black;
+  color: $font-color;
 }
 
-.breadcrumbs li a:hover {
-  color: black;
+.breadcrumbs a:hover {
+  color: $font-color;
   text-decoration: underline;
 }
 
@@ -196,7 +197,7 @@ a:hover {
 
 footer {
   display: grid;
-  background-color: #505151;
+  background-color: $background-footer;
   padding: 1rem;
   text-align: center;
 }
@@ -205,13 +206,13 @@ footer {
   font-family: 'Noto Serif', sans-serif;
   display: grid;
   grid-gap: 1rem;
-  color: white;
+  color: $description;
 }
 
 .footer-item {
   display: block;
   margin: 0;
-  color: white;
+  color: $description;
 }
 
 
@@ -225,6 +226,40 @@ footer {
   }
 }
 
+.card {
+  padding: 1rem;
+  border: 3px solid $background-footer;
+  border-radius: 2px;
+  margin-top: 2rem;
+  a {
+    display: block;
+    text-decoration: underline;
+    font-family: 'Noto serif';
+    margin: 0;
+    padding: 0;
+  }
+  figure {
+    margin: 0;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.card__school-link {
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+.card__school-link:link,
+.card__school-link:visited {
+  color: $font-color;
+}
+
+.card__school-photo {
+  margin-top: 1rem;
+}
 #map {
   width: 100%;
   height: 300px;
