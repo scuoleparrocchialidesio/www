@@ -3,6 +3,8 @@ $content-width: 40rem;
 $breakpoint-xs: 440px;
 $breakpoint-sm: 600px;
 $font-color: #282A2E;
+$description: white;
+$background-footer: #505151;
 
 * {
   box-sizing: border-box;
@@ -137,19 +139,19 @@ a:hover {
   content: ">\00a0";
 }
 
-.breadcrumbs li {
+.breadcrumbs li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
+  color: $font-color;
 }
 
 .breadcrumbs a:visited {
   text-decoration: none;
-  color: black;
+  color: $font-color;
 }
 
 .breadcrumbs a:hover {
-  color: black;
+  color: $font-color;
   text-decoration: underline;
 }
 
@@ -195,23 +197,22 @@ a:hover {
 
 footer {
   display: grid;
-  background-color: #505151;
+  background-color: $background-footer;
   padding: 1rem;
   text-align: center;
-  border-top: 2px solid black;
 }
 
 .footer-wrapper {
   font-family: 'Noto Serif', sans-serif;
   display: grid;
   grid-gap: 1rem;
-  color: white;
+  color: $description;
 }
 
 .footer-item {
   display: block;
   margin: 0;
-  color: white;
+  color: $description;
 }
 
 
@@ -227,7 +228,7 @@ footer {
 
 .card {
   padding: 1rem;
-  border: 3px solid #505151;
+  border: 3px solid $background-footer;
   border-radius: 2px;
   margin-top: 2rem;
   a {
