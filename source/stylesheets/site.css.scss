@@ -137,18 +137,18 @@ a:hover {
   content: ">\00a0";
 }
 
-.breadcrumbs li a {
+.breadcrumbs li {
   text-decoration: none;
   text-transform: uppercase;
   color: black;
 }
 
-.breadcrumbs li a:visited {
+.breadcrumbs :visited {
   text-decoration: none;
   color: black;
 }
 
-.breadcrumbs li a:hover {
+.breadcrumbs :hover {
   color: black;
   text-decoration: underline;
 }

@@ -1,6 +1,6 @@
 <ul class="breadcrumbs">
-  <li><a href="/index.html">Home</a></li>
-  <li><a href="/le_scuole.html">Le scuole</a></li>
+  <li> <%= link_to 'Home', '/index.html', class: 'breadcrumbs__home'%> </li>
+  <li> <%= link_to 'Le scuole', '/le_scuole.html', class: 'breadcrumbs__le-scuole'%> </li>
 </ul>
 <section class="card">
   <%= link_to 'Scuola dell\'infanzia San Giuseppe', '/scuole/san_giuseppe.html', class: 'card__school-link' %>
