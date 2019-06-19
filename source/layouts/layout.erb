@@ -6,15 +6,45 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <%= stylesheet_link_tag "site" %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <!-- Use the title from a page's frontmatter if it has one -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
     <title>
     </title>
   </head>
   <body>
-    <header>The header</header>
-    <main>
-      <%= yield %>
+    <header>
+      <div class="header-brand">
+        <img src="images/logo.png" class="header-brand__logo">
+        <a class="header-brand__link" href="/">Scuole Parrocchiali Desio</a>
+      </div>
+      <a class="header-link header-link--schools"href="/le_scuole.html">Le scuole</a>
+      <a class="header-link header-link--laboratories"href="/esploratori.html">Esploratori</a>
+    </header>
+    <main class="main">
+      <ul class="breadcrumbs">
+        <li><a href="/index.html">Home</a></li>
+      </ul>
+      <div class="page-content">
+        <%= yield %>
+      </div>
     </main>
-    <footer>The footer</footer>
+    <footer>
+      <div class="footer-wrapper">
+        <p class="footer-item">
+          Via Conciliazione, 9 - 20832 Desio(MB)<br />
+          Tel./Fax 0362 622042
+        </p>
+        <a class="footer-item" href="mailto:materna.sangiuseppe@tiscali.it">materna.sangiuseppe@tiscali.it</a>
+        <a class="footer-item" href="/scuole_in_chiaro.html">
+          Scuola in chiaro
+        </a>
+        <a class="footer-item" href="link-direct-download">
+          Calendario giorni festivi
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

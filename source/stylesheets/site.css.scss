@@ -1,30 +1,231 @@
-html,body{
-      height: 100%;
+
+$content-width: 40rem;
+$breakpoint-xs: 440px;
+$breakpoint-sm: 600px;
+$font-color: #282A2E;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: grid;
-  grid-gap: 10px;
-  margin: 0;
-  height: 100%;
-  grid-template-columns:1fr;
-  grid-template-areas:
-                 "header"
-                 "main"
-                 "footer";
-  grid-template-rows: 100px 1fr 80px;
-  text-align: center;
+  align-items: start;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
 }
 
 header {
-  grid-area: header;
+  margin: 2rem;
+  font-size: 1.5rem;
+  display: grid;
+  justify-items: center;
+  grid-gap: 1.5rem;
+}
+
+.header-brand {
+  grid-column: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-brand__link {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.header-link {
+  grid-column: 1 / 3;
+  text-transform: uppercase;
+}
+
+@media (min-width: $breakpoint-xs) {
+  .header-brand {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .header-link {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  header {
+    align-items: center;
+  }
+
+  .header-brand {
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2 / 3;
+  }
+
+  .header-link {
+    grid-row: 1;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, $content-width) minmax(0, 1fr);
+  margin: 2rem;
+}
+
+.breadcrumbs,
+.page-content {
+  grid-column: 2;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.header-brand__link {
+  font-size: 25px;
+  font-family: 'Noto Serif', serif;
+}
+
+.header-brand__logo {
+  width: 70px;
+  margin: 1rem;
+}
+
+.header-link--laboratories:visited,
+.header-link--schools:visited {
+  color: $font-color;
+}
+
+.header-link--laboratories:link,
+.header-link--schools:link {
+  color: $font-color;
+}
+
+.header-brand__link:visited,
+.header-link:visited {
+  color: $font-color;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  font-family: 'Noto Serif', sans-serif;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.breadcrumbs li:before {
+  color: black;
+  content: ">\00a0";
+}
+
+.breadcrumbs li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.breadcrumbs li a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumbs li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.title {
+  font-family: 'Noto Serif', serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 13px;
+}
+.documents-list a:visited,
+.documents-list a:link{
+  color: $font-color;
+}
+.documents-list {
+  display: flex;
+  flex-direction: column;
+}
+.documents-list__item {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .documents-list__item:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+}
+
+.document-icon {
+  width: 50px;
+  height: auto;
+}
+
+.gallery {
+  object-fit: cover;
 }
 
 footer {
-  grid-area: footer;
+  display: grid;
+  background-color: #505151;
+  padding: 1rem;
+  text-align: center;
 }
 
-header,
-footer{
-  background-color: lightgrey;
+.footer-wrapper {
+  font-family: 'Noto Serif', sans-serif;
+  display: grid;
+  grid-gap: 1rem;
+  color: white;
+}
+
+.footer-item {
+  display: block;
+  margin: 0;
+  color: white;
+}
+
+
+@media (min-width: $breakpoint-sm) {
+  footer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, $content-width) minmax(0, 1fr);
+  }
+  .footer-wrapper {
+    grid-column: 2;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 300px;
 }

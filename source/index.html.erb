@@ -1,3 +1,51 @@
-<h1>
-  Scuole parrocchiali Desio
-</h1>
+<section>
+  <h1 class="title">
+    Chi siamo?
+  </h1>
+
+  <p class="text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <h1 class="title">
+    Obiettivi
+  </h1>
+
+  <p class="text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <div id="map"></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoib2xpc3RpayIsImEiOiJjaW03a2lvd2MwMDBsdzhtNTZzeG9pYzFsIn0.EnuMVTEKyFfJN6XZhtLmIA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/olistik/cjwz2na0u0fbj1cn5k04p4rzy',
+      center: [9.207719, 45.617772], // starting position [lng, lat]
+      zoom: 12.453748326689462,
+    });
+    // disable map zoom when using scroll
+    map.scrollZoom.disable();
+    var boundingBox = [
+      [9.24872585278814, 45.62608006006212],
+      [9.168509906896816, 45.599777925198964]
+    ]
+    map.fitBounds(boundingBox)
+  </script>
+
+  <div class="documents-list">
+    <div class="documents-list__item">
+      <%= image_tag 'document-icon.png', class: 'document-icon' %>
+      <a class="scuola-in-chiaro" href="/scuole_in_chiaro.html">
+        Scuola in chiaro
+      </a>
+    </div>
+    <div class="documents-list__item">
+      <%= image_tag 'document-icon.png', class: 'document-icon' %>
+      <a class="calendario" href="link-direct-download">
+        Calendario giorni festivi
+      </a>
+    </div>
+  </div>
+</section>
