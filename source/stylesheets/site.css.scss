@@ -231,7 +231,7 @@ footer {
   margin-top: 2rem;
   a {
     display: block;
-    text-decoration: none;
+    text-decoration: underline;
     font-family: 'Noto serif';
     margin: 0;
     padding: 0;
@@ -245,14 +245,13 @@ footer {
   }
 }
 
-.card--school-link {
+.card__school-link {
   display: block;
   text-align: center;
   justify-content: center;
-  text-decoration: underline;
 }
-.card--school-link:link,
-.card--school-link:visited {
+.card__school-link:link,
+.card__school-link:visited {
   color: $font-color;
 }
 
