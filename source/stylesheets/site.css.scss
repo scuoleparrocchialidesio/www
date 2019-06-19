@@ -82,7 +82,6 @@ header {
   margin: 2rem;
 }
 
-.breadcrumbs,
 .page-content {
   grid-column: 2;
 }
@@ -226,9 +225,9 @@ footer {
 }
 
 .card {
+  padding: 1rem;
   border: 3px solid #505151;
   border-radius: 2px;
-  padding: 1rem;
   margin-top: 2rem;
   a {
     display: block;
@@ -246,13 +245,14 @@ footer {
   }
 }
 
-.school-link {
+.card--school-link {
   display: block;
   text-align: center;
   justify-content: center;
+  text-decoration: underline;
 }
-.school-link:link,
-.school-link:visited {
+.card--school-link:link,
+.card--school-link:visited {
   color: $font-color;
 }
 

@@ -3,22 +3,28 @@
   <li><a href="/le_scuole.html">Le scuole</a></li>
 </ul>
 <section class="card">
-      <%= link_to 'Scuola dell&#39infanzia San Giuseppe', '/scuole/san_giuseppe.html', class: 'school-link' %>
+  <%= link_to 'Scuola dell\'infanzia San Giuseppe', '/scuole/san_giuseppe.html', class: 'card card--school-link' %>
   <figure>
-    <%= image_tag 'example1.jpg', class: 'example'%>
+    <% link_to '/scuole/san_giuseppe.html' do %>
+      <%= image_tag 'example1.jpg', class: 'card card--school-photo'%>
+    <% end %>
   </figure>
 </section>
 
 <section class="card">
-      <%= link_to 'Scuola dell&#39infanzia San Giorgio', '/scuole/san_giorgio.html', class: 'school-link' %>
+  <%= link_to 'Scuola dell\'infanzia San Giorgio', '/scuole/san_giorgio.html', class: 'card card--school-link' %>
   <figure>
-    <%= image_tag 'example2.jpg', class: 'example'%>
+    <% link_to '/scuole/san_giorgio.html' do %>
+      <%= image_tag 'example2.jpg', class: 'card card--school-photo'%>
+    <% end %>
   </figure>
 </section>
 
 <section class="card">
-      <%= link_to 'Scuola dell&#39infanzia paritaria San Vincenzo', '/scuole/san_vincenzo.html', class: 'school-link' %>
+  <%= link_to 'Scuola dell\'infanzia paritaria San Vincenzo', '/scuole/san_vincenzo.html', class: 'card card--school-link' %>
   <figure>
-    <%= image_tag 'example3.jpg', class: 'example'%>
+    <% link_to '/scuole/san_vincenzo.html' do %>
+      <%= image_tag 'example3.jpg', class: 'card card--school-photo'%>
+    <% end %>
   </figure>
 </section>
