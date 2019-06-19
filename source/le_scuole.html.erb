@@ -1,12 +1,12 @@
 <ul class="breadcrumbs">
-  <li> <%= link_to 'Home', '/index.html', class: 'breadcrumbs__home'%> </li>
-  <li> <%= link_to 'Le scuole', '/le_scuole.html', class: 'breadcrumbs__le-scuole'%> </li>
+  <li><%= link_to 'Home', '/index.html', class: 'breadcrumbs__home' %></li>
+  <li><%= link_to 'Le scuole', '/le_scuole.html', class: 'breadcrumbs__le-scuole' %></li>
 </ul>
 <section class="card">
   <%= link_to 'Scuola dell\'infanzia San Giuseppe', '/scuole/san_giuseppe.html', class: 'card__school-link' %>
   <figure>
     <% link_to '/scuole/san_giuseppe.html' do %>
-      <%= image_tag 'example1.jpg', class: 'card__school-photo'%>
+      <%= image_tag 'example1.jpg', class: 'card__school-photo' %>
     <% end %>
   </figure>
 </section>
@@ -15,7 +15,7 @@
   <%= link_to 'Scuola dell\'infanzia San Giorgio', '/scuole/san_giorgio.html', class: 'card__school-link' %>
   <figure>
     <% link_to '/scuole/san_giorgio.html' do %>
-      <%= image_tag 'example2.jpg', class: 'card__school-photo'%>
+      <%= image_tag 'example2.jpg', class: 'card__school-photo' %>
     <% end %>
   </figure>
 </section>
@@ -24,7 +24,7 @@
   <%= link_to 'Scuola dell\'infanzia paritaria San Vincenzo', '/scuole/san_vincenzo.html', class: 'card__school-link' %>
   <figure>
     <% link_to '/scuole/san_vincenzo.html' do %>
-      <%= image_tag 'example3.jpg', class: 'card__school-photo'%>
+      <%= image_tag 'example3.jpg', class: 'card__school-photo' %>
     <% end %>
   </figure>
 </section>
