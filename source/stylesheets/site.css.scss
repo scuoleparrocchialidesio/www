@@ -175,7 +175,6 @@ a:hover {
   flex-direction: column;
 }
 .documents-list__item {
-  padding: 1rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -260,6 +259,7 @@ footer {
 #map {
   width: 100%;
   height: 300px;
+  margin-bottom: 1rem;
 }
 
 .cover-image {
@@ -286,6 +286,7 @@ footer {
   max-height: 20rem;
   object-fit: cover;
   justify-self: center;
+  padding: 0.5rem;
 }
 
 .gallery__item figcaption {
@@ -300,17 +301,30 @@ footer {
   text-align: center;
 }
 
-button {
-  position: relative;
-  a:visited, a{
+.botton {
+  display: inline-grid;
+  border: 2px solid $background-footer;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  align-content: center;
+  width: 10%;
+  height: auto;
+  :visited{
     color: $font-color;
   }
 }
 
-
 table {
+  align: center;
   border-collapse: collapse;
   th, td {
     border: 1px solid black;
   }
+}
+
+.team, .project, .event, .contact {
+  margin-top: 5rem;
 }

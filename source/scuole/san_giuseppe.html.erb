@@ -1,7 +1,7 @@
 <ul class="breadcrumbs">
-  <li><%= link_to 'Home', '/index.html', class: 'breadcrumbs__home' %></li>
-  <li><%= link_to 'Le scuole', '/le_scuole.html', class: 'breadcrumbs__le-scuole' %></li>
-  <li><%= link_to 'San Giuseppe', '/scuole/san_giuseppe.html', class: 'breadcrumbs__san-giuseppe' %></li>
+  <li><%= link_to 'Home', '/index.html' %></li>
+  <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+  <li><%= link_to 'San Giuseppe', '/scuole/san_giuseppe.html' %></li>
 </ul>
 
 <%= image_tag 'example1.jpg', class: 'cover-image' %>
@@ -20,40 +20,40 @@
   <div class="gallery">
     <figure class="gallery__item">
       <% link_to '/scuole/san_giorgio.html' do %>
-        <%= image_tag 'photo.png', class: 'gallery__photo' %>
+        <%= image_tag 'photo_ex1.jpeg', class: 'gallery__photo' %>
       <% end %>
-      <figcaption>Esempio</figcaption>
+      <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
     </figure>
     <figure class="gallery__item">
       <% link_to '/scuole/san_giorgio.html' do %>
-        <%= image_tag 'photo.png', class: 'gallery__photo' %>
+        <%= image_tag 'photo_ex2.jpeg', class: 'gallery__photo' %>
       <% end %>
-      <figcaption>Esempio</figcaption>
+      <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
     </figure>
     <figure class="gallery__item">
       <% link_to '/scuole/san_giorgio.html' do %>
-        <%= image_tag 'photo.png', class: 'gallery__photo' %>
+        <%= image_tag 'photo_ex3.jpg', class: 'gallery__photo' %>
       <% end %>
-      <figcaption>Esempio</figcaption>
+      <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
     </figure>
     <figure class="gallery__item">
       <% link_to '/scuole/san_giorgio.html' do %>
-        <%= image_tag 'photo.png', class: 'gallery__photo' %>
+        <%= image_tag 'photo_ex4.jpeg', class: 'gallery__photo' %>
       <% end %>
-      <figcaption>Esempio</figcaption>
+      <figcaption>Lorem ipsum dolor sit amet.</figcaption>
     </figure>
     <figure class="gallery__item">
       <% link_to '/scuole/san_giorgio.html' do %>
-        <%= image_tag 'photo.png', class: 'gallery__photo' %>
+        <%= image_tag 'photo_ex5.jpeg', class: 'gallery__photo' %>
       <% end %>
-      <figcaption>Esempio</figcaption>
+      <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
     </figure>
   </div>
 </section>
 
 <section>
   <h1 class="title">Orari</h1>
-  <table>
+  <table align="center">
     <tbody>
       <tr>
         <td>7.30*/9.00</td>
@@ -114,18 +114,18 @@
   <div class="project">
     <h1 class="title">Progetti in corso</h1>
     <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <button id="project__button"><%= link_to 'Scopri', '/scuole/san_giuseppe/progetti.html', class:'event__button'%></button>
+    <%= link_to 'Scopri', '/scuole/san_giuseppe/progetti.html', class: 'botton' %>
   </div>
   <div class="event">
     <h1 class="title">Eventi</h1>
     <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <button id="project__button"><%= link_to 'Scopri', '/scuole/san_giuseppe/progetti_in_corso.html', class:'event__button'%></button>
+    <%= link_to 'Scopri', '/scuole/san_giuseppe/progetti_in_corso.html', class:'botton' %>
   </div>
   <div class="contact">
     <h1 class="title">Contatti</h1>
     <p class="text">
       Via Conciliazione 9 20832 Desio<br />
-      Email: materna.sangiuseppe@tiscali.it <br />
+      Email:<%= link_to 'materna.sangiuseppe@tiscali.it', 'mailto:materna.sangiuseppe@tiscali.it' %> <br />
       Tel./Fax: 0362 622042<br />
     </p>
   </div>
