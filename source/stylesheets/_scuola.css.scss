@@ -2,7 +2,7 @@
   padding: 1rem;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax($breakpoint-g, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax($dimension-column, 1fr));
   grid-auto-rows: min-content;
   justify-items: center;
 }
@@ -28,53 +28,52 @@
   color: white;
   padding: 0.25rem;
   text-align: center;
-}
-
-figcaption {
-  color: $white;
-  padding: 0.25rem;
-  text-align: center;
-  font-family: 'Noto Serif', sans-serif
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $alternative-color-font;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .contact {
   padding-bottom: 2rem;
   text-align: center;
   a {
-    color: $font-color;
+    color: $site-primary-color;
   }
 }
 
 .section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button {
-    border: 2px solid #505151;
-    border-radius: 10px;
-    padding: 0.5rem;
-    text-align: center;
+  border: 2px solid $site-primary-color;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 .button:active,
 .button:visited {
-  color: $font-color;
+  color: $site-primary-color;
 }
 
 .table {
   text-align: center;
   display: grid;
-  border-left: 3px solid $font-color;
-  border-bottom: 3px solid $font-color;
-  border-right: 3px solid $font-color;
+  border-left: 3px solid $site-primary-color;
+  border-bottom: 3px solid $site-primary-color;
+  border-right: 3px solid $site-primary-color;
   box-shadow: 2px 2px 2px $background-footer;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .table thead {
-  background: $font-color;
-  color: $white;
-  font-family: 'Noto Serif', serif;
+  background: $site-primary-color;
+  color: $site-background;
   text-transform: uppercase;
 }
 
@@ -99,8 +98,7 @@ figcaption {
   grid-template-rows: 1fr;
   grid-gap: 0.25rem;
   padding: 0.25rem;
-  background: $light-gray;
-  font-family: 'Noto Sans', sans-serif;
+  background: $site-secondary-color-two;
 }
 
 .table td {
@@ -116,7 +114,7 @@ figcaption {
     grid-gap: 0.25rem;
     grid-template-columns: 1fr 1fr;
     padding: 0;
-    background: $white;
+    background: $site-background;
   }
 
   .table th {
@@ -125,7 +123,7 @@ figcaption {
 
   .table td {
     padding: 0.5rem;
-    background: $light-gray;
+    background: $site-secondary-color-two;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -139,6 +137,6 @@ figcaption {
   }
 
   .table td:nth-child(2n+1) {
-    background: $dark-gray;
+    background: $site-secondary-color-one;
   }
 }

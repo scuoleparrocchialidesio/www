@@ -1,12 +1,15 @@
 $content-width: 40rem;
+$dimension-column: 200px;
 $breakpoint-xs: 440px;
 $breakpoint-sm: 600px;
-$breakpoint-g: 200px;
-$font-color: #282A2E;
+$alternative-color-font: #FFFFFF;
+$site-background: #FFFEFE;
+$site-secondary-color-one: #EFEFEF;
+$site-secondary-color-two: #DCDCDC;
 $background-footer: #505151;
-$dark-gray: #dcdcdc;
-$light-gray: #efefef;
-$white: #FFFFFF;
+$site-primary-color: #282A2E;
+
+@import '_scuola.css.scss';
 
 * {
   box-sizing: border-box;
@@ -106,17 +109,17 @@ a:link {
 
 .header-link--laboratories:visited,
 .header-link--schools:visited {
-  color: $font-color;
+  color: $site-primary-color;
 }
 
 .header-link--laboratories:link,
 .header-link--schools:link {
-  color: $font-color;
+  color: $site-primary-color;
 }
 
 .header-brand__link:visited,
 .header-link:visited {
-  color: $font-color;
+  color: $site-primary-color;
 }
 
 a:hover {
@@ -144,16 +147,16 @@ a:hover {
 .breadcrumbs li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: $font-color;
+  color: $site-primary-color;
 }
 
 .breadcrumbs a:visited {
   text-decoration: none;
-  color: $font-color;
+  color: $site-primary-color;
 }
 
 .breadcrumbs a:hover {
-  color: $font-color;
+  color: $site-primary-color;
   text-decoration: underline;
 }
 
@@ -169,7 +172,7 @@ a:hover {
 }
 .documents-list a:visited,
 .documents-list a:link{
-  color: $font-color;
+  color: $site-primary-color;
 }
 .documents-list {
   display: flex;
@@ -179,6 +182,7 @@ a:hover {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 @media (min-width: $breakpoint-sm) {
@@ -203,13 +207,13 @@ footer {
   font-family: 'Noto Serif', sans-serif;
   display: grid;
   grid-gap: 1rem;
-  color: $white;
+  color: $alternative-color-font;
 }
 
 .footer-item {
   display: block;
   margin: 0;
-  color: $white;
+  color: $alternative-color-font;
 }
 
 
@@ -258,7 +262,7 @@ footer {
 }
 .card__school-link:link,
 .card__school-link:visited {
-  color: $font-color;
+  color: $site-primary-color;
 }
 
 .card__school-photo {
