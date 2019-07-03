@@ -251,7 +251,7 @@ footer {
 
 .cover-image {
   display: block;
-  width: 100%;
+  max-width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -273,4 +273,22 @@ footer {
   width: 100%;
   height: 300px;
   margin-bottom: 1rem;
+}
+
+.button {
+  border: 2px solid $site-primary-color;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+  color: $site-primary-color;
+}
+
+.button:active,
+.button:visited {
+  color: $site-primary-color;
+}
+
+.project{
+  padding-bottom: 3rem;
+
 }

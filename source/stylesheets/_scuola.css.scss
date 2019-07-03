@@ -49,19 +49,6 @@
   align-items: center;
 }
 
-.button {
-  border: 2px solid $site-primary-color;
-  border-radius: 10px;
-  padding: 0.5rem;
-  text-align: center;
-  color: $site-primary-color;
-}
-
-.button:active,
-.button:visited {
-  color: $site-primary-color;
-}
-
 .table {
   text-align: center;
   display: grid;
