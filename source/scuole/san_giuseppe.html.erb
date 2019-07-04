@@ -110,15 +110,21 @@
     <%= image_tag 'teacher.jpeg', class: 'cover-image' %>
     <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
-  <div class="section">
-    <h1 class="title">Progetti in corso</h1>
-    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <%= link_to 'Scopri', '/scuole/san_giuseppe/progetti_in_corso.html', class: 'button' %>
-  </div>
-  <div class="section">
-    <h1 class="title">Eventi</h1>
-    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <%= link_to 'Scopri', '/scuole/san_giuseppe/eventi.html', class:'button' %>
+  <div class="card-container">
+    <div class="section-card">
+      <h1 class="title">Progetti in corso</h1>
+      <div class="card-body">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <%= link_to 'Scopri', '/scuole/san_giuseppe/progetti_in_corso.html', class: 'button' %>
+      </div>
+    </div>
+    <div class="section-card">
+      <h1 class="title">Eventi</h1>
+      <div class="card-body">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <%= link_to 'Scopri', '/scuole/san_giuseppe/eventi.html', class:'button' %>
+      </div>
+    </div>
   </div>
   <div class="contact">
     <h1 class="title">Contatti</h1>

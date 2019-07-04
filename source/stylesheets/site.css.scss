@@ -287,12 +287,51 @@ footer {
   color: $site-primary-color;
 }
 
-.button--project {
-  margin: 2rem;
-  align-self: flex-end;
-}
-
 .date {
   display: flex;
   align-self: start
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: min-content;
+  justify-items: center;
+  grid-gap: 2rem;
+  margin: 2rem 0;
+}
+
+.section-card {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1rem;
+  .cover-image {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .title {
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid black;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .button {
+    box-shadow: 1px 1px black;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    align-self: center;
+    width: min-width;
+  }
+}
+
+.card-body {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
 }
