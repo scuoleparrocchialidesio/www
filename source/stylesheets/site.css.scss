@@ -318,6 +318,7 @@ footer {
     border-bottom: 2px solid black;
     width: 100%;
     font-size: 1.5rem;
+    font-family: 'Noto Sans', sans-serif;
   }
   .button {
     box-shadow: 1px 1px black;
@@ -334,4 +335,11 @@ footer {
   display: flex;
   justify-content: space-between;
   height: 100%;
+}
+
+.section-card__cover {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
