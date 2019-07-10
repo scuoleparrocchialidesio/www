@@ -1,0 +1,48 @@
+<ul class="breadcrumbs">
+  <li><%= link_to 'Home', '/index.html' %></li>
+  <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+  <li><%= link_to 'San Vincenzo', '/scuole/san_vincenzo.html' %></li>
+  <li><%= link_to 'Progetti in corso', '/scuole/san_vincenzo/progetti_in_corso.html' %></li>
+</ul>
+
+<div class="card-container">
+  <section class="section-card">
+    <%= image_tag 'https://images.unsplash.com/photo-1542627250-da40d2d18228?ifit=crop', class: 'section-card__cover' %>
+    <h1 class="title">Progetto 1</h1>
+    <p class="date">03/07/2019</p>
+    <div class="card-body">
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <%= link_to 'Scopri il progetto', '/scuole/san_vincenzo/progetti_in_corso/progetto_1.html', class: 'button' %>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <%= image_tag 'https://images.unsplash.com/photo-1535209039648-9524289505fd?fit=crop', class:'section-card__cover' %>
+    <h1 class="title">Progetto 2</h1>
+    <p class="date">03/07/2019</p>
+    <div class="card-body">
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      <%= link_to 'Scopri il progetto', '/scuole/san_vincenzo/progetti_in_corso/progetto_2.html', class: 'button' %>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <%= image_tag 'https://images.unsplash.com/photo-1542627250-da40d2d18228?ifit=crop', class: 'section-card__cover' %>
+    <h1 class="title">Progetto 3</h1>
+    <p class="date">03/07/2019</p>
+    <div class="card-body">
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      <%= link_to 'Scopri il progetto', '/scuole/san_vincenzo/progetti_in_corso/progetto_3.html', class: 'button' %>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <%= image_tag 'https://images.unsplash.com/photo-1535209039648-9524289505fd?fit=crop', class:'section-card__cover' %>
+    <h1 class="title">Progetto 4</h1>
+    <p class="date">03/07/2019</p>
+    <div class="card-body">
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <%= link_to 'Scopri il progetto', '/scuole/san_vincenzo/progetti_in_corso/progetto_4.html', class: 'button' %>
+    </div>
+  </section>
+</div>
