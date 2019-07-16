@@ -10,6 +10,7 @@ $background-footer: #505151;
 $site-primary-color: #282A2E;
 
 @import '_scuola.css.scss';
+@import '_timeline.css.scss';
 
 * {
   box-sizing: border-box;
@@ -163,14 +164,15 @@ a:hover {
 
 .title {
   font-family: 'Noto Serif', serif;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .text {
   font-family: 'Noto Sans', sans-serif;
   font-size: 13px;
+  margin-bottom: 2rem;
 }
 .documents-list a:visited,
 .documents-list a:link{
@@ -231,10 +233,10 @@ footer {
 
 .card {
   padding: 1rem;
-  border: 3px solid $background-footer;
+  border: 3px solid $site-primary-color;
   border-radius: 2px;
   margin-top: 2rem;
-  font-family: 'Noto Serif', sans-serif
+  font-family: 'Noto Serif', sans-serif;
   a {
     display: block;
     text-decoration: underline;
