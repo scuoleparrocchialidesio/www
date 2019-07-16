@@ -1,3 +1,11 @@
+<ul class="breadcrumbs">
+  <li><%= link_to 'Home', '/index.html' %></li>
+  <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+  <li><%= link_to 'San Giuseppe', '/scuole/san_giuseppe.html' %></li>
+  <li><%= link_to 'Eventi', '/scuole/san_giuseppe/eventi.html' %></li>
+</ul>
+
+
 <section>
   <ol class="timeline">
     <li>
@@ -5,7 +13,7 @@
       <span class="timeline__date">
         2019-07-12
       </span>
-      <div class="timeline__card">
+      <div class="section-card timeline__card">
         <h1 class="title">Evento 1</h1>
         <%= image_tag 'peda-icon.jpg', class: 'timeline__icon' %>
         <p class="timeline__label">Amministrazione</p>
@@ -20,7 +28,7 @@
       <span class="timeline__date">
         2019-07-12
       </span>
-      <div class="timeline__card">
+      <div class="section-card timeline__card">
         <h1 class="title">Evento 1</h1>
         <%= image_tag 'amm-icon.png', class: 'timeline__icon' %>
         <p class="timeline__label">Amministrazione</p>
