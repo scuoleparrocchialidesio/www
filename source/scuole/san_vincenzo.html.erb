@@ -104,7 +104,7 @@
   </table>
 </section>
 
-<section>
+<section class="grid-container">
   <div class="team">
     <h1 class="title">Il team</h1>
     <%= image_tag 'teacher.jpeg', class: 'cover-image' %>
@@ -126,7 +126,7 @@
       </div>
     </div>
   </div>
-  <div class="contact">
+  <div class="contact-card">
     <h1 class="title">Contatti</h1>
     <p class="text">
       Via Conciliazione 9 20832 Desio<br />
@@ -134,26 +134,25 @@
       Tel./Fax: 0362 622042<br />
     </p>
   </div>
+
+  <div class="documents-list">
+    <div class="documents-list__item">
+      <%= image_tag 'document-icon.png', class: 'document-icon' %>
+      <a class="pagina-social" href="https://www.facebook.com/Scuola-dellInfanzia-San-Giuseppe-Desio-144760232830033/">
+        Pagina Social
+      </a>
+    </div>
+    <div class="documents-list__item">
+      <%= image_tag 'document-icon.png', class: 'document-icon' %>
+      <a class="forum" href="https://infanziasangiuseppe.desio.org/">
+        Forum
+      </a>
+    </div>
+    <div class="documents-list__item">
+      <%= image_tag 'document-icon.png', class: 'document-icon' %>
+      <a class="calendario" href="download">
+        Calendario giorni festivi
+      </a>
+    </div>
+  </div>
 </section>
-
-
-<div class="documents-list">
-  <div class="documents-list__item">
-    <%= image_tag 'document-icon.png', class: 'document-icon' %>
-    <a class="pagina-social" href="https://www.facebook.com/Scuola-dellInfanzia-San-Giuseppe-Desio-144760232830033/">
-      Pagina Social
-    </a>
-  </div>
-  <div class="documents-list__item">
-    <%= image_tag 'document-icon.png', class: 'document-icon' %>
-    <a class="forum" href="https://infanziasangiuseppe.desio.org/">
-      Forum
-    </a>
-  </div>
-  <div class="documents-list__item">
-    <%= image_tag 'document-icon.png', class: 'document-icon' %>
-    <a class="calendario" href="download">
-      Calendario giorni festivi
-    </a>
-  </div>
-</div>

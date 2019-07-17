@@ -1,0 +1,30 @@
+footer {
+  display: grid;
+  background-color: $background-footer;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-wrapper {
+  font-family: 'Noto Serif', sans-serif;
+  display: grid;
+  grid-gap: 1rem;
+  color: $alternative-color-font;
+}
+
+.footer-item {
+  display: block;
+  margin: 0;
+  color: $alternative-color-font;
+}
+
+
+@media (min-width: $breakpoint-sm) {
+  footer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, $content-width) minmax(0, 1fr);
+  }
+  .footer-wrapper {
+    grid-column: 2;
+    grid-template-columns: 1fr 1fr;
+  }
+}

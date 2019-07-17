@@ -1,61 +1,18 @@
-.gallery {
-  padding: 1rem;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax($dimension-column, 1fr));
-  grid-auto-rows: min-content;
-  justify-items: center;
-}
-
-.gallery-card {
-  border: 3px solid black;
-  background: black;
-  width: 100%;
-}
-
-.gallery-card__link {
-  display: block;
-}
-
-.gallery-card__image {
-  display: block;
-  padding: 0.25rem;
-  background: white;
-  width: 100%;
-}
-
-.gallery-card__description {
-  color: white;
-  padding: 0.25rem;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: $alternative-color-font;
-  font-family: 'Noto Sans', sans-serif;
-}
-
-.contact {
-  padding-bottom: 2rem;
-  text-align: center;
-  a {
-    color: $site-primary-color;
-  }
-}
-
 .table {
   text-align: center;
   display: grid;
   border-left: 3px solid $site-primary-color;
   border-bottom: 3px solid $site-primary-color;
   border-right: 3px solid $site-primary-color;
-  box-shadow: 2px 2px 2px $background-footer;
-  font-family: 'Noto Sans', sans-serif;
+  box-shadow: 2px 2px 2px $site-secondary-color-two;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .table thead {
   background: $site-primary-color;
   color: $site-background;
+  font-family: 'Noto Serif', serif;
   text-transform: uppercase;
 }
 
@@ -80,7 +37,8 @@
   grid-template-rows: 1fr;
   grid-gap: 0.25rem;
   padding: 0.25rem;
-  background: $site-secondary-color-two;
+  background: $site-secondary-color-one;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .table td {
@@ -105,11 +63,11 @@
 
   .table td {
     padding: 0.5rem;
-    background: $site-secondary-color-two;
+    background: $site-secondary-color-one;
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: 1px 1px 2px $background-footer;
+    box-shadow: 1px 1px 2px $site-secondary-color-two;
   }
 
   .table tbody {
@@ -119,6 +77,6 @@
   }
 
   .table td:nth-child(2n+1) {
-    background: $site-secondary-color-one;
+    background: $site-secondary-color-two;
   }
 }

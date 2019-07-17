@@ -14,14 +14,14 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
     <title>Scuole Parrocchiali Desio</title>
   </head>
-  <body>
+  <body class="page-layout">
     <header>
       <div class="header-brand">
-        <img src="/images/logo.png" class="header-brand__logo">
-        <a class="header-brand__link" href="/">Scuole Parrocchiali Desio</a>
+        <%= image_tag '/images/logo.png', class: 'header-brand__logo' %>
+        <%= link_to 'Scuole Parrocchiali Desio', '/', class: 'font-title link header-brand__link' %>
       </div>
-      <a class="header-link header-link--schools"href="/le_scuole.html">Le scuole</a>
-      <a class="header-link header-link--laboratories"href="/esploratori.html">Esploratori</a>
+      <%= link_to 'Le scuole', '/le_scuole.html', class: 'font-title link header-link' %>
+      <%= link_to 'Esploratori', '/esploratori.html', class: 'font-title link header-link' %>
     </header>
     <main class="main">
       <div class="page-content">
