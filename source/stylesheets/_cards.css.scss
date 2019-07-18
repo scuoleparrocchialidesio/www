@@ -14,6 +14,25 @@
   align-items: center;
   border-radius: 5px;
   padding: 1rem;
+  .cover-image {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+   }
+  .title {
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid black;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .button {
+    box-shadow: 1px 1px black;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    align-self: center;
+    width: min-width;
+  }
 }
 
 .section-card__cover {
@@ -29,12 +48,12 @@
   border-bottom: 2px solid $site-primary-color;
   width: 100%;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .section-card__date {
   display: flex;
   align-self: start;
-  margin: 0;
 }
 
 .section-card__body {
@@ -61,90 +80,3 @@
   border: 3px solid #505151;
   border-radius: 2px;
 }
-
-// .card {
-//   padding: 1rem;
-//   border: 3px solid $site-primary-color;
-//   border-radius: 2px;
-//   margin-top: 2rem;
-//   font-family: 'Noto Serif', sans-serif;
-//   a {
-//     display: block;
-//     text-decoration: underline;
-//     margin: 0;
-//     padding: 0;
-//   }
-//   figure {
-//     margin: 0;
-//     img {
-//       display: block;
-//       width: 100%;
-//     }
-//   }
-// }
-//
-// .card__school-link {
-//   display: block;
-//   text-align: center;
-//   justify-content: center;
-// }
-// .card__school-link:link,
-// .card__school-link:visited {
-//   color: $site-primary-color;
-// }
-//
-// .card__school-photo {
-//   margin-top: 1rem;
-// }
-//
-
-// .card-container {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-//   grid-auto-rows: min-content;
-//   justify-items: center;
-//   grid-gap: 2rem;
-//   margin: 2rem 0;
-// }
-//
-// .section-card {
-//   border: 2px solid black;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   border-radius: 5px;
-//   padding: 1rem;
-//   .cover-image {
-//     margin-top: 0;
-//     margin-bottom: 0.5rem;
-//   }
-//   .title {
-//     padding-bottom: 0.5rem;
-//     margin-top: 0;
-//     border-bottom: 2px solid black;
-//     width: 100%;
-//     font-size: 1.5rem;
-//     font-family: 'Noto Sans', sans-serif;
-//   }
-//   .button {
-//     box-shadow: 1px 1px black;
-//     margin-top: 1rem;
-//     padding: 0.5rem 2rem;
-//     text-transform: uppercase;
-//     align-self: center;
-//     width: min-width;
-//   }
-// }
-//
-// .card-body {
-//   flex-direction: column;
-//   display: flex;
-//   justify-content: space-between;
-//   height: 100%;
-// }
-//
-// .section-card__cover {
-//   display: block;
-//   width: 100%;
-//   margin-bottom: 0.5rem;
-// }

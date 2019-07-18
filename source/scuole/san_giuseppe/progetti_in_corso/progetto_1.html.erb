@@ -1,34 +1,49 @@
-<ul class="breadcrumbs">
-  <li><%= link_to 'Home', '/index.html' %></li>
-  <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
-  <li><%= link_to 'San Giuseppe', '/scuole/san_giuseppe.html' %></li>
-  <li><%= link_to 'Progetti in corso', '/scuole/san_giuseppe/progetti_in_corso.html' %></li>
-  <li><%= link_to 'Progetto 1', '/scuole/san_giuseppe/progetti_in_corso/progetto_1.html' %></li>
-</ul>
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/index.html' %></li>
+    <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+    <li><%= link_to 'San Giuseppe', '/scuole/san_giuseppe.html' %></li>
+    <li><%= link_to 'Progetti in corso', '/scuole/san_giuseppe/progetti_in_corso.html' %></li>
+    <li><%= link_to 'Progetto 1', '/scuole/san_giuseppe/progetti_in_corso/progetto_1.html' %></li>
+  </ul>
 
-<section>
-  <h1 class="title">Progetto 1</h1>
-  <%= image_tag 'example1.jpg', class: 'cover-image' %>
-  <p class="date">03/07/2019</p>
-  <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="section-card">
+    <h1 class="section-card__title">Progetto 1</h1>
+    <%= image_tag 'example1.jpg', class: 'cover-image' %>
+    <p class="section-card__date">03/07/2019</p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
   <div class="gallery">
     <figure class="gallery-card">
-      <% link_to '/scuole/san_giuseppe.html', class:'gallery-card__link' do %>
-        <%= image_tag 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=200&h=200', class: 'gallery-card__image' %>
+      <% link_to '/scuole/san_giuseppe.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=200&h=200', class: 'card__image' %>
       <% end %>
-      <figcaption class="gallery-card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</figcaption>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</figcaption>
     </figure>
     <figure class="gallery-card">
-      <% link_to '/scuole/san_giuseppe.html', class:'gallery-card__link' do %>
-        <%= image_tag 'https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?fit=crop&w=200&h=200', class: 'gallery-card__image' %>
+      <% link_to '/scuole/san_giuseppe.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?fit=crop&w=200&h=200', class: 'card__image' %>
       <% end %>
-      <figcaption class="gallery-card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
     </figure>
     <figure class="gallery-card">
-      <% link_to '/scuole/san_giuseppe.html', class:'gallery-card__link' do %>
-        <%= image_tag 'https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fit=crop&w=200&h=200', class: 'gallery-card__image' %>
+      <% link_to '/scuole/san_giuseppe.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fit=crop&w=200&h=200', class: 'card__image' %>
       <% end %>
-      <figcaption class="gallery-card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giuseppe.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1457978535446-dcd58011ea54?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giuseppe.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1504169448388-60f322bebb2c?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
     </figure>
   </div>
 </section>
