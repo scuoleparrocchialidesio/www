@@ -1,8 +1,8 @@
 <ul class="breadcrumbs">
   <li><%= link_to 'Home', '/index.html' %></li>
   <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
-  <li><%= link_to 'San Giuseppe', '/scuole/san_giuseppe.html' %></li>
-  <li><%= link_to 'Eventi', '/scuole/san_giuseppe/eventi.html' %></li>
+  <li><%= link_to school[:label], "/scuole/#{school[:slug]}.html" %></li>
+  <li><%= link_to 'Eventi', "/scuole/#{school[:slug]}/eventi.html" %></li>
 </ul>
 
 <%

@@ -1,0 +1,20 @@
+<ul class="breadcrumbs">
+  <li><%= link_to 'Home', '/index.html' %></li>
+  <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+  <li><%= link_to school[:label], "/scuole/#{school[:slug]}.html" %></li>
+  <li><%= link_to 'Progetti in corso', "/scuole/#{school[:slug]}/progetti_in_corso.html" %></li>
+</ul>
+
+<div class="card-container">
+  <% projects.each do |project| %>
+    <section class="section-card">
+      <%= image_tag project[:cover], class:'section-card__cover' %>
+      <h1 class="section-card__title"><%= project[:title] %></h1>
+      <p class="section-card__date"><%= project[:date] %></p>
+      <div class="section-card__body">
+        <p class="text"><%= project[:text] %></p>
+        <%= link_to 'Scopri il progetto', "/scuole/#{school[:slug]}/progetti_in_corso/#{project[:slug]}.html", class: 'button button--card-action' %>
+      </div>
+    </section>
+  <% end %>
+</div>
