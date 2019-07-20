@@ -68,6 +68,7 @@ projects = [
       school: school,
       projects: projects,
     },
+    ignore: true,
   )
   proxy(
     "/scuole/#{school[:slug]}/eventi.html",
@@ -76,6 +77,7 @@ projects = [
       school: school,
       projects: projects,
     },
+    ignore: true,
   )
   proxy(
     "/scuole/#{school[:slug]}/progetti_in_corso.html",
@@ -84,6 +86,7 @@ projects = [
       school: school,
       projects: projects,
     },
+    ignore: true,
   )
   projects.each do |project|
     proxy(
@@ -93,6 +96,7 @@ projects = [
         school: school,
         project: project,
       },
+      ignore: true,
     )
   end
 end
