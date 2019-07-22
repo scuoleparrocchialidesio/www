@@ -1,0 +1,50 @@
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/index.html' %></li>
+    <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+    <li><%= link_to school[:label], "/scuole/#{school[:slug]}.html" %></li>
+    <li><%= link_to 'Progetti in corso', "/scuole/#{school[:slug]}/progetti_in_corso.html" %></li>
+    <li><%= link_to project[:title], "/scuole/#{school[:slug]}/progetti_in_corso/#{project[:slug]}.html" %></li>
+  </ul>
+
+  <div class="section-card">
+    <h1 class="section-card__title"><%= project[:title] %></h1>
+    <%= image_tag project[:cover], class: 'cover-image' %>
+    <p class="section-card__date"><%= project[:date] %></p>
+    <p class="text"><%= project[:text] %></p>
+  </div>
+
+<% images = [
+  {
+    cover: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=200&h=200',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.',
+  },
+  {
+    cover: 'https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?fit=crop&w=200&h=200',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+  },
+  {
+    cover: 'https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fit=crop&w=200&h=200',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    cover: 'https://images.unsplash.com/photo-1457978535446-dcd58011ea54?fit=crop&w=200&h=200',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+  },
+  {
+    cover: 'https://images.unsplash.com/photo-1504169448388-60f322bebb2c?fit=crop&w=200&h=200',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+] %>
+
+  <div class="gallery">
+    <% images.each do |image| %>
+      <figure class="gallery-card">
+        <% link_to image[:cover], class:'card__link' do %>
+          <%= image_tag image[:cover], class: 'card__image' %>
+        <% end %>
+        <figcaption class="card__description"><%= image[:description] %></figcaption>
+      </figure>
+    <% end %>
+  </div>
+</section>

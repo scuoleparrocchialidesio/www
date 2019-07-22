@@ -1,0 +1,82 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($dimension-column, 1fr));
+  grid-auto-rows: min-content;
+  justify-items: center;
+  grid-gap: 2rem;
+  margin: 2rem 0;
+}
+
+.section-card {
+  border: 2px solid $site-primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1rem;
+  .cover-image {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+   }
+  .title {
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid black;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .button {
+    box-shadow: 1px 1px black;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    align-self: center;
+    width: min-width;
+  }
+}
+
+.section-card__cover {
+  display: block;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.section-card__title {
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  border-bottom: 2px solid $site-primary-color;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.section-card__date {
+  display: flex;
+  align-self: start;
+}
+
+.section-card__body {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.section-card__text {
+}
+
+.contact-card {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.school-card {
+  display: grid;
+  justify-items: center;
+  grid-gap: 1rem;
+  padding: 1rem;
+  border: 3px solid #505151;
+  border-radius: 2px;
+}

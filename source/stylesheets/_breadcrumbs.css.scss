@@ -1,0 +1,33 @@
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  font-family: 'Noto Serif', sans-serif;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.breadcrumbs li:before {
+  color: black;
+  content: ">\00a0";
+}
+
+.breadcrumbs li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $site-primary-color;
+}
+
+.breadcrumbs a:visited {
+  text-decoration: none;
+  color: $site-primary-color;
+}
+
+.breadcrumbs a:hover {
+  color: $site-primary-color;
+  text-decoration: underline;
+}

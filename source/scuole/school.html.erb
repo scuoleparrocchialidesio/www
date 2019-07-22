@@ -1,0 +1,146 @@
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/index.html' %></li>
+    <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+    <li><%= link_to school[:label], "/scuole/#{school[:slug]}.html" %></li>
+  </ul>
+
+  <%= image_tag school[:cover], class: 'cover-image' %>
+  <h1 class="title">
+    Storia
+  </h1>
+  <p class="text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <div class="gallery">
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1457978535446-dcd58011ea54?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1504169448388-60f322bebb2c?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
+    </figure>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Orari</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>7.30* - 9.00</td>
+        <td>Pre-scuola</td>
+      </tr>
+      <tr>
+        <td>9.00 - 9.30</td>
+        <td>Accoglienza</td>
+      </tr>
+      <tr>
+        <td>9.45 - 11.30</td>
+        <td>Attività di sezione, intersezione,<br>laboratori e interventi specialistici</td>
+      </tr>
+      <tr>
+        <td>11.30 - 12.00</td>
+        <td>Riordino e preparazione al pranzo</td>
+      </tr>
+      <tr>
+        <td>12.00 - 13.00</td>
+        <td>Pranzo</td>
+      </tr>
+      <tr>
+        <td>13.00 - 13.30</td>
+        <td>Gioco libero</td>
+      </tr>
+      <tr>
+        <td>13.00</td>
+        <td>Prima uscita</td>
+      </tr>
+      <tr>
+        <td>13.30 - 14.45</td>
+        <td>Nanna piccoli</td>
+      </tr>
+      <tr>
+        <td>14.00 - 15.30</td>
+        <td>Attivita in sezionee interventi specialisti<br>(Mezzani e Grandi)</td>
+      </tr>
+      <tr>
+        <td>15.45 - 16.00</td>
+        <td>Uscita</td>
+      </tr>
+      <tr>
+        <td>16.00 - 17.30*</td>
+        <td>Post scuola</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="team">
+    <h1 class="title">Il team</h1>
+    <%= image_tag 'teacher.jpeg', class: 'cover-image' %>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div class="card-container">
+    <div class="section-card">
+      <h1 class="title section-card__title">Progetti in corso</h1>
+      <div class="section-card__body">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <%= link_to 'Scopri', "/scuole/#{school[:slug]}/progetti_in_corso.html", class: 'button button--card-action' %>
+      </div>
+    </div>
+    <div class="section-card">
+      <h1 class="title section-card__title">Eventi</h1>
+      <div class="section-card__body">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <%= link_to 'Scopri', "/scuole/#{school[:slug]}/eventi.html", class:'button button--card-action' %>
+      </div>
+    </div>
+  </div>
+  <div class="contact-card">
+    <h1 class="title">Contatti</h1>
+    <p class="text">
+      Via Conciliazione 9 20832 Desio<br />
+      Email:<%= link_to 'materna.sangiuseppe@tiscali.it', 'mailto:materna.sangiuseppe@tiscali.it', class: 'link' %> <br />
+      Tel./Fax: 0362 622042<br />
+    </p>
+  </div>
+
+  <div class="documents-list">
+    <div class="documents-list__item">
+      <%= image_tag 'document-icon.png', class: 'document-icon' %>
+      <%= link_to 'Pagina social', 'https://www.facebook.com/Scuola-dellInfanzia-San-Giuseppe-Desio-144760232830033/', class: 'link' %>
+    </div>
+    <div class="documents-list__item">
+      <%= image_tag 'document-icon.png', class: 'document-icon' %>
+      <%= link_to 'Forum', 'https://infanziasangiuseppe.desio.org/', class: 'link' %>
+    </div>
+    <div class="documents-list__item">
+      <%= image_tag 'document-icon.png', class: 'document-icon' %>
+      <%= link_to 'Caledario giorni festivi', 'download', class: 'link' %>
+    </div>
+  </div>
+</section>

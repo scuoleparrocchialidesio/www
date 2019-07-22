@@ -1,0 +1,15 @@
+.link {
+  color: $site-primary-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link--primary {
+  &:visited,
+  &:link,
+   {
+    color: $site-primary-color;
+  }
+}

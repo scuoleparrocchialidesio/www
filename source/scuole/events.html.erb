@@ -1,0 +1,46 @@
+<ul class="breadcrumbs">
+  <li><%= link_to 'Home', '/index.html' %></li>
+  <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+  <li><%= link_to school[:label], "/scuole/#{school[:slug]}.html" %></li>
+  <li><%= link_to 'Eventi', "/scuole/#{school[:slug]}/eventi.html" %></li>
+</ul>
+
+<%
+list = [
+  {
+    date: '2019-07-12',
+    title: 'Evento 1',
+    icon_path: 'peda-icon.jpg',
+    category: 'Pedagogico',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    link: 'https://foo.bar',
+  },
+  {
+    date: '2019-07-16',
+    title: 'Evento 2',
+    icon_path: 'amm-icon.png',
+    category: 'Amministrazione',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    link: 'https://foo.bar',
+  },
+]
+%>
+
+<section>
+  <ol class="timeline">
+    <% list.each do |item| %>
+    <li>
+      <span class="timeline__label"><%= item[:date] %></span>
+      <div class="section-card timeline__card">
+        <h1 class="section-card__title"><%= item[:title] %></h1>
+        <%= image_tag item[:icon_path], class: 'timeline__icon' %>
+        <p class="section-card__label"><%= item[:category] %></p>
+        <div class="section-card__body">
+          <p class="section-card__text"><%= item[:description] %></p>
+          <%= link_to 'Scopri', item[:link], class:'button button--card-action' %>
+        </div>
+      </div>
+    </li>
+    <% end %>
+  </ol>
+</section>
