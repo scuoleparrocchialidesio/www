@@ -43,8 +43,7 @@ projects = [
     slug: 'progetto_4',
   },
 ]
-
-[
+schools = [
   {
     slug: 'san_giorgio',
     label: 'San Giorgio',
@@ -60,7 +59,27 @@ projects = [
     label: 'San Vincenzo',
     cover: 'example3.jpg',
   },
-].each do |school|
+]
+events = [
+  {
+    slug: 'evento-1',
+    date: '2019-07-12',
+    title: 'Evento 1',
+    icon_path: 'peda-icon.jpg',
+    category: 'Pedagogico',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    slug: 'evento-2',
+    date: '2019-07-16',
+    title: 'Evento 2',
+    icon_path: 'amm-icon.png',
+    category: 'Amministrazione',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+]
+
+schools.each do |school|
   proxy(
     "/scuole/#{school[:slug]}.html",
     '/scuole/school.html',
@@ -75,10 +94,21 @@ projects = [
     '/scuole/events.html',
     locals: {
       school: school,
-      projects: projects,
+      events: events,
     },
     ignore: true,
   )
+  events.each do |event|
+    proxy(
+      "/scuole/#{school[:slug]}/eventi/#{event[:slug]}.html",
+      '/scuole/event.html',
+      locals: {
+        school: school,
+        event: event,
+      },
+      ignore: true,
+    )
+  end
   proxy(
     "/scuole/#{school[:slug]}/progetti_in_corso.html",
     '/scuole/projects.html',
