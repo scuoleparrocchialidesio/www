@@ -1,9 +1,19 @@
-<ul class="breadcrumbs">
-  <li><%= link_to 'Home', '/index.html' %></li>
-  <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
-  <li><%= link_to school[:label], "/scuole/#{school[:slug]}.html" %></li>
-  <li><%= link_to 'Eventi', "/scuole/#{school[:slug]}/eventi.html" %></li>
-  <li><%= link_to event[:title], "/scuole/#{school[:slug]}/eventi/#{event[:slug]}.html" %></li>
-</ul>
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/index.html' %></li>
+    <li><%= link_to 'Le scuole', '/le_scuole.html' %></li>
+    <li><%= link_to school[:label], "/scuole/#{school[:slug]}.html" %></li>
+    <li><%= link_to 'Eventi', "/scuole/#{school[:slug]}/eventi.html" %></li>
+    <li><%= link_to event[:title], "/scuole/#{school[:slug]}/eventi/#{event[:slug]}.html" %></li>
+  </ul>
 
-<%= event.inspect %>
+  <div class="section-card">
+    <p class="section-card__date"><%= event[:date] %></p>
+    <div class="event">
+      <%= image_tag event[:icon_path], class: 'document-icon' %>
+      <p class="section-card__label"><%= event[:category] %></p>
+    </div>
+    <h1 class="section-card__title font-title"><%= event[:title] %></h1>
+    <p class="text"><%= event[:description] %></p>
+  </div>
+</section>
