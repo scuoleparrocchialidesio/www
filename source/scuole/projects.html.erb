@@ -9,7 +9,7 @@
   <% projects.each do |project| %>
     <section class="section-card">
       <%= image_tag project[:cover], class:'section-card__cover' %>
-      <h1 class="section-card__title"><%= project[:title] %></h1>
+      <h1 class="section-card__title font-title"><%= project[:title] %></h1>
       <p class="section-card__date"><%= project[:date] %></p>
       <div class="section-card__body">
         <p class="text"><%= project[:text] %></p>
