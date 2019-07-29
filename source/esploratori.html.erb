@@ -1,1 +1,62 @@
-<h1 class="title">Esploratori</h1>
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/index.html' %></li>
+    <li><%= link_to 'Esploratori', '/esploratori.html' %></li>
+  </ul>
+
+  <h1 class="title">Esploratori</h1>
+
+  <h1 class="title">In cosa consistono?</h1>
+  <p class="text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <div class="gallery">
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1457978535446-dcd58011ea54?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
+    </figure>
+    <figure class="gallery-card">
+      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
+        <%= image_tag 'https://images.unsplash.com/photo-1504169448388-60f322bebb2c?fit=crop&w=200&h=200', class: 'card__image' %>
+      <% end %>
+      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
+    </figure>
+  </div>
+  <div class="card-container">
+    <div class="section-card">
+      <h1 class="section-card__title font-title">Il team</h1>
+      <%= image_tag 'teacher.jpeg', class: 'cover-image' %>
+      <div class="section-card__body">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+    <div class="section-card">
+      <h1 class="section-card__title font-title">Calendario</h1>
+      <div class="section-card__body">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <%= link_to 'Scopri', "/esploratori/calendario.html", class:'button button--card-action' %>
+      </div>
+    </div>
+  </div>
+</section>
