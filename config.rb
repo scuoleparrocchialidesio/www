@@ -84,7 +84,7 @@ explorer_events = [
     slug: 'evento-1',
     date: '2019-07-12',
     title: 'Evento 1',
-    icon_path: 'expo-icon.jpg',
+    icon_path: 'explo-icon.png',
     category: 'Esploratori',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
