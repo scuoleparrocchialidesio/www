@@ -96,12 +96,13 @@ explorer_events = [
     category: 'Genitorialità',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
-  slug: 'evento-2',
-  date: '2019-07-16',
-  title: 'Evento 2',
-  icon_path: 'grav-icon.png',
-  category: 'Mamme in gravidanza',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  {
+    slug: 'evento-3',
+    date: '2019-07-16',
+    title: 'Evento 3',
+    icon_path: 'grav-icon.png',
+    category: 'Mamme in gravidanza',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 ]
 
@@ -158,24 +159,22 @@ schools.each do |school|
   end
 end
 
-explorer.each do |explorer_events|
+proxy(
+  "/esploratori/calendario.html",
+  '/explorer/calendar.html',
+  locals: {
+    explorer_events: explorer_events,
+  },
+)
+explorer_events.each do |event|
   proxy(
-    "/esploratori/calendario.html",
-    '/explorer/calendar.html',
+    "/esploratori/calendario/#{event[:slug]}.html",
+    '/explorer/calendar/event.html',
     locals: {
-      explorer_events: explorer_events,
+      event: event,
     },
-  )
-  explorer_events.each do |event|
-    proxy(
-      "/esploratori/calendario/#{event[:slug]}.html",
-      '/explorer/calendar/event.html',
-      locals: {
-        event: event,
-      },
       ignore: true
-    )
-  end
+  )
 end
 
 
