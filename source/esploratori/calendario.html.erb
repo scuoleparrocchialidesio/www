@@ -7,53 +7,19 @@
 
   <h1 class="title">Calendario</h1>
   <ol class="timeline">
-  <li>
-    <span class="timeline__label">
-      2019-07-12
-    </span>
-    <div class="section-card timeline__card">
-      <h1 class="section-card__title text-center font-title">Evento 1</h1>
-      <%= image_tag 'explo-icon.png', class: 'timeline__icon' %>
-      <p class="section-card__label">Esploratori</p>
-      <div class="section-card__body">
-        <p class="section-card__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <%= link_to 'Scopri', '.html', class:'button button--card-action' %>
+    <% explorer_events.each do |event| %>
+    <li>
+      <span class="timeline__label"><%= event[:date] %></span>
+      <div class="section-card timeline__card">
+        <h1 class="section-card__title text-center font-title"><%= event[:title] %></h1>
+        <%= image_tag event[:icon_path], class: 'timeline__icon' %>
+        <p class="section-card__label"><%= event[:category] %></p>
+        <div class="section-card__body">
+          <p class="section-card__text"><%= event[:description] %></p>
+          <%= link_to 'Scopri', "/scuole/#{school[:slug]}/eventi/#{event[:slug]}.html", class:'button button--card-action' %>
+        </div>
       </div>
-    </div>
-  </li>
-  <li>
-    <span class="timeline__label">
-      2019-07-12
-    </span>
-    <div class="section-card timeline__card">
-      <h1 class="section-card__title text-center font-title">Evento 3</h1>
-      <%= image_tag 'gen-icon.png', class: 'timeline__icon' %>
-      <p class="section-card__label">Genitorialità</p>
-      <div class="section-card__body">
-        <p class="section-card__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <%= link_to 'Scopri', '.html', class:'button button--card-action' %>
-      </div>
-    </div>
-  </li>
-  <li>
-    <span class="timeline__label">
-      2019-07-12
-    </span>
-    <div class="section-card timeline__card">
-      <h1 class="section-card__title text-center font-title">Evento 3</h1>
-      <%= image_tag 'grav-icon.png', class: 'timeline__icon' %>
-      <p class="section-card__label">Mamme in gravidanza</p>
-      <div class="section-card__body">
-        <p class="section-card__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <%= link_to 'Scopri', '.html', class:'button button--card-action' %>
-      </div>
-    </div>
-  </li>
- </ol>
+    </li>
+    <% end %>
+  </ol>
 </section>
