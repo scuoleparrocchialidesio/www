@@ -1,1 +1,23 @@
-<h1>Scuole in chiaro</h1>
+<section>
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/index.html' %></li>
+    <li><%= link_to 'Scuole in chiaro', '/scuole_in_chiaro.html' %></li>
+  </ul>
+
+  <h1 class="title">Scuole in chiaro</h1>
+
+  <div class="card-container">
+    <% documents.each do |documents| %>
+      <section class="section-card">
+        <%= image_tag [:icon_path], class:'section-card__cover' %>
+        <h1 class="section-card__title font-title"><%= [:title] %></h1>
+        <p class="section-card__date"><%= [:date] %></p>
+        <div class="section-card__body">
+          <p class="text"><%= [:text] %></p>
+          <p class="section-card__date"><%= [:update] %></p>
+          <%= link_to 'Scarica', "download", class: 'button button--card-action' %>
+        </div>
+      </section>
+    <% end %>
+  </div>
+</section>

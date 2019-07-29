@@ -106,6 +106,41 @@ explorer_events = [
   },
 ]
 
+documents = [
+  {
+    slug: 'documento-1',
+    date: '2019-07-12',
+    update: '2019-08-01',
+    title: 'Documento 1',
+    icon_path: 'document-icon.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    slug: 'documento-2',
+    date: '2019-07-12',
+    update: '2019-08-01',
+    title: 'Documento 2',
+    icon_path: 'document-icon.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    slug: 'documento-3',
+    date: '2019-07-12',
+    update: '2019-08-01',
+    title: 'Documento 3',
+    icon_path: 'document-icon.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    slug: 'documento-4',
+    date: '2019-07-12',
+    update: '2019-08-01',
+    title: 'Documento 4',
+    icon_path: 'document-icon.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+]
+
 schools.each do |school|
   proxy(
     "/scuole/#{school[:slug]}.html",
@@ -175,6 +210,26 @@ explorer_events.each do |event|
       event: event,
     },
       ignore: true
+  )
+end
+
+proxy(
+  "/scuole_in_chiaro.html",
+  '/school_in_clear.html',
+  locals: {
+    documents: document,
+  },
+  ignore: true,
+)
+
+documents.each do |documents|
+  proxy(
+    "/scuole_in_chiaro.html",
+    '/school_in_clear.html',
+    locals: {
+      documents: documets,
+    },
+    ignore: true,
   )
 end
 
