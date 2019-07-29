@@ -165,6 +165,7 @@ proxy(
   locals: {
     explorer_events: explorer_events,
   },
+  ignore: true,
 )
 explorer_events.each do |event|
   proxy(
