@@ -79,6 +79,33 @@ events = [
   },
 ]
 
+explorer_events = [
+  {
+    slug: 'evento-1',
+    date: '2019-07-12',
+    title: 'Evento 1',
+    icon_path: 'explo-icon.png',
+    category: 'Esploratori',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    slug: 'evento-2',
+    date: '2019-07-16',
+    title: 'Evento 2',
+    icon_path: 'gen-icon.png',
+    category: 'Genitorialità',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    slug: 'evento-3',
+    date: '2019-07-16',
+    title: 'Evento 3',
+    icon_path: 'grav-icon.png',
+    category: 'Mamme in gravidanza',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+]
+
 schools.each do |school|
   proxy(
     "/scuole/#{school[:slug]}.html",
@@ -118,6 +145,7 @@ schools.each do |school|
     },
     ignore: true,
   )
+
   projects.each do |project|
     proxy(
       "/scuole/#{school[:slug]}/progetti_in_corso/#{project[:slug]}.html",
@@ -130,6 +158,28 @@ schools.each do |school|
     )
   end
 end
+
+proxy(
+  "/esploratori/calendario.html",
+  '/explorer/calendar.html',
+  locals: {
+    explorer_events: explorer_events,
+  },
+  ignore: true,
+)
+explorer_events.each do |event|
+  proxy(
+    "/esploratori/calendario/#{event[:slug]}.html",
+    '/explorer/calendar/event.html',
+    locals: {
+      event: event,
+    },
+      ignore: true
+  )
+end
+
+
+
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'

@@ -1,0 +1,25 @@
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/index.html' %></li>
+    <li><%= link_to 'Esploratori', '/esploratori.html' %></li>
+    <li><%= link_to 'Calendario', '/esploratori/calendario.html' %></li>
+  </ul>
+
+  <h1 class="title">Calendario</h1>
+  <ol class="timeline">
+    <% explorer_events.each do |event| %>
+    <li>
+      <span class="timeline__label"><%= event[:date] %></span>
+      <div class="section-card timeline__card">
+        <h1 class="section-card__title text-center font-title"><%= event[:title] %></h1>
+        <%= image_tag event[:icon_path], class: 'timeline__icon' %>
+        <p class="section-card__label"><%= event[:category] %></p>
+        <div class="section-card__body">
+          <p class="section-card__text"><%= event[:description] %></p>
+          <%= link_to 'Scopri', "/esploratori/calendario/#{event[:slug]}.html", class:'button button--card-action' %>
+        </div>
+      </div>
+    </li>
+    <% end %>
+  </ol>
+</section>
