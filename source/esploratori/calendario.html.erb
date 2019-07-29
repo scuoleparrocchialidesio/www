@@ -1,0 +1,59 @@
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/index.html' %></li>
+    <li><%= link_to 'Esploratori', '/esploratori.html' %></li>
+    <li><%= link_to 'Calendario', '/esploratori/calendario.html' %></li>
+  </ul>
+
+  <h1 class="title">Calendario</h1>
+  <ol class="timeline">
+  <li>
+    <span class="timeline__label">
+      2019-07-12
+    </span>
+    <div class="section-card timeline__card">
+      <h1 class="section-card__title text-center font-title">Evento 1</h1>
+      <%= image_tag 'explo-icon.png', class: 'timeline__icon' %>
+      <p class="section-card__label">Esploratori</p>
+      <div class="section-card__body">
+        <p class="section-card__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <%= link_to 'Scopri', '.html', class:'button button--card-action' %>
+      </div>
+    </div>
+  </li>
+  <li>
+    <span class="timeline__label">
+      2019-07-12
+    </span>
+    <div class="section-card timeline__card">
+      <h1 class="section-card__title text-center font-title">Evento 3</h1>
+      <%= image_tag 'gen-icon.png', class: 'timeline__icon' %>
+      <p class="section-card__label">Genitorialità</p>
+      <div class="section-card__body">
+        <p class="section-card__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <%= link_to 'Scopri', '.html', class:'button button--card-action' %>
+      </div>
+    </div>
+  </li>
+  <li>
+    <span class="timeline__label">
+      2019-07-12
+    </span>
+    <div class="section-card timeline__card">
+      <h1 class="section-card__title text-center font-title">Evento 3</h1>
+      <%= image_tag 'grav-icon.png', class: 'timeline__icon' %>
+      <p class="section-card__label">Mamme in gravidanza</p>
+      <div class="section-card__body">
+        <p class="section-card__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <%= link_to 'Scopri', '.html', class:'button button--card-action' %>
+      </div>
+    </div>
+  </li>
+ </ol>
+</section>
