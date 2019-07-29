@@ -7,15 +7,15 @@
   <h1 class="title">Scuole in chiaro</h1>
 
   <div class="card-container">
-    <% documents.each do |documents| %>
+    <% documents.each do |document| %>
       <section class="section-card">
-        <%= image_tag [:icon_path], class:'section-card__cover' %>
-        <h1 class="section-card__title font-title"><%= [:title] %></h1>
-        <p class="section-card__date"><%= [:date] %></p>
+        <%= image_tag document[:icon_path], class:'document-icon' %>
+        <h1 class="section-card__title font-title"><%= document[:title] %></h1>
+        <p class="section-card__date"><%= document[:date] %></p>
         <div class="section-card__body">
-          <p class="text"><%= [:text] %></p>
-          <p class="section-card__date"><%= [:update] %></p>
-          <%= link_to 'Scarica', [:url], class: 'button button--card-action' %>
+          <p class="text"><%= document[:description] %></p>
+          <p class="section-card__date"><%= document[:update] %></p>
+          <%= link_to 'Scarica', document[:url], class: 'button button--card-action' %>
         </div>
       </section>
     <% end %>
