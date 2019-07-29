@@ -108,7 +108,7 @@ explorer_events = [
 
 documents = [
   {
-    slug: 'documento-1',
+    url: 'documento-1',
     date: '2019-07-12',
     update: '2019-08-01',
     title: 'Documento 1',
@@ -116,7 +116,7 @@ documents = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    slug: 'documento-2',
+    url: 'documento-2',
     date: '2019-07-12',
     update: '2019-08-01',
     title: 'Documento 2',
@@ -124,7 +124,7 @@ documents = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    slug: 'documento-3',
+    url: 'documento-3',
     date: '2019-07-12',
     update: '2019-08-01',
     title: 'Documento 3',
@@ -132,7 +132,7 @@ documents = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    slug: 'documento-4',
+    url: 'documento-4',
     date: '2019-07-12',
     update: '2019-08-01',
     title: 'Documento 4',
@@ -217,21 +217,10 @@ proxy(
   "/scuole_in_chiaro.html",
   '/school_in_clear.html',
   locals: {
-    documents: document,
+    documents: documents,
   },
   ignore: true,
 )
-
-documents.each do |documents|
-  proxy(
-    "/scuole_in_chiaro.html",
-    '/school_in_clear.html',
-    locals: {
-      documents: documets,
-    },
-    ignore: true,
-  )
-end
 
 
 
