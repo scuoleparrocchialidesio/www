@@ -15,7 +15,17 @@
         <%= image_tag event[:icon_path], class: 'timeline__icon' %>
         <p class="section-card__label"><%= event[:category] %></p>
         <div class="section-card__body">
-          <p class="section-card__text"><%= event[:description] %></p>
+          <p class="section-card__text">
+            <%=
+              words_limit = 30
+              words = event[:description].split(' ')
+              if words.length <= words_limit
+                event[:description]
+              else
+                words[0..words_limit].join(' ') + ' [..]'
+              end
+             %>
+          </p>
           <%= link_to 'Scopri', "/scuole/#{school[:slug]}/eventi/#{event[:slug]}.html", class:'button button--card-action' %>
         </div>
       </div>
