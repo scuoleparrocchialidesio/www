@@ -1,5 +1,7 @@
 # Scuole Parrocchiali Desio: sito web
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95c1c049-f895-4c8c-8c46-50d40b26d82c/deploy-status)](https://app.netlify.com/sites/scuoleparrocchialidesio-www/deploys)
+
 - [Netlify](https://scuoleparrocchialidesio.netlify.com)
 - Style guide:
   - [web site](https://style-guide-site.netlify.com)
