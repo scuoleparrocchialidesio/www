@@ -5,6 +5,13 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :dato, live_reload: true, preview: true
+
+# enable livereload on development
+configure :development do
+  activate :livereload
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -78,7 +85,6 @@ events = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 ]
-
 explorer_events = [
   {
     slug: 'evento-1',
@@ -105,7 +111,6 @@ explorer_events = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 ]
-
 documents = [
   {
     url: 'documento-1',
@@ -221,8 +226,6 @@ proxy(
   },
   ignore: true,
 )
-
-
 
 
 # With alternative layout

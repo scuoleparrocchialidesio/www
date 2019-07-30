@@ -12,6 +12,18 @@ $ bundle install
 $ bundle exec middleman serve
 ```
 
+Copy `.env.sample` in `.env`:
+
+```shell
+$ cp .env.sample .env
+```
+
+And make sure to fill the field `DATO_API_TOKEN` with the proper value from
+
+https://scuoleparrocchialidesio.admin.datocms.com/admin/access_tokens
+
+It is required a read-only API token.
+
 Open http://localhost:4567
 
 ## Deploy
