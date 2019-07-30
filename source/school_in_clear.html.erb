@@ -11,10 +11,24 @@
       <section class="section-card">
         <%= image_tag document[:icon_path], class:'document-icon' %>
         <h1 class="section-card__title font-title"><%= document[:title] %></h1>
-        <p class="section-card__date"><%= document[:date] %></p>
+        <p class="section-card__date date-info">
+          <span class="date-info__label">
+            Creato il:
+          </span>
+          <span class="date-info__value">
+            <%= document[:date] %>
+          </span>
+        </p>
         <div class="section-card__body">
           <p class="text"><%= document[:description] %></p>
-          <p class="section-card__date"><%= document[:update] %></p>
+          <p class="section-card__date date-info">
+            <span class="date-info__label">
+              Aggiornato il:
+            </span>
+            <span class="date-info__value">
+              <%= document[:update] %>
+            </span>
+          </p>
           <%= link_to 'Scarica', document[:url], class: 'button button--card-action' %>
         </div>
       </section>
