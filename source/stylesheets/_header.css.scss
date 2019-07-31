@@ -31,29 +31,20 @@ header {
   text-transform: uppercase;
 }
 
-@media (min-width: $breakpoint-xs) {
-  .header-brand {
-    width: 100%;
-    flex-direction: row;
-  }
-
-  .header-link {
-    grid-column: auto;
-  }
-}
-
 @media (min-width: $breakpoint-sm) {
   header {
     align-items: center;
   }
 
+  .header-link {
+    grid-column: auto;
+    grid-row: 1;
+  }
+
   .header-brand {
+    flex-direction: row;
     width: 100%;
     grid-row: 1;
     grid-column: 2 / 3;
-  }
-
-  .header-link {
-    grid-row: 1;
   }
 }

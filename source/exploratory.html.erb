@@ -1,0 +1,42 @@
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/' %></li>
+    <li><%= link_to 'Esploratori', exploratory_path %></li>
+  </ul>
+
+  <h1 class="title">Esploratori</h1>
+
+  <h1 class="title">In cosa consistono?</h1>
+  <p class="text"><%= dato.exploratory.description %></p>
+
+  <div class="gallery">
+    <% dato.exploratory.gallery.each do |photo| %>
+      <figure class="gallery-card">
+        <% link_to photo.image.url, class:'card__link' do %>
+          <%= image_tag thumbnail_url(image: photo.image), class: 'card__image' %>
+        <% end %>
+        <% if present?(photo.description) %>
+          <figcaption class="card__description">
+            <%= photo.description %>
+          </figcaption>
+        <% end %>
+      </figure>
+    <% end %>
+  </div>
+  <div class="card-container">
+    <div class="section-card">
+      <h1 class="section-card__title font-title">Il team</h1>
+      <%= image_tag dato.exploratory.team.photo.url, class: 'cover-image' %>
+      <div class="section-card__body">
+        <p class="text"><%= dato.exploratory.team.description %></p>
+      </div>
+    </div>
+    <div class="section-card">
+      <h1 class="section-card__title font-title">Calendario</h1>
+      <div class="section-card__body">
+        <p class="text"><%= dato.exploratory.calendar_description %></p>
+        <%= link_to 'Scopri', exploratory_calendar_path, class:'button button--card-action' %>
+      </div>
+    </div>
+  </div>
+</section>

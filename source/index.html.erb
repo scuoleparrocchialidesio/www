@@ -1,6 +1,6 @@
 <section class="grid-container">
   <ul class="breadcrumbs">
-    <li><%= link_to 'HOME', '/index.html', class: 'breadcrumbs__home' %></li>
+    <li><%= link_to 'HOME', '/', class: 'breadcrumbs__home' %></li>
   </ul>
 
   <h1 class="title">
@@ -36,11 +36,11 @@
   <div class="documents-list">
     <div class="documents-list__item">
       <%= image_tag 'document-icon.png', class: 'document-icon' %>
-      <%= link_to 'Scuola in chiaro', '/scuole_in_chiaro.html', class: 'link' %>
+      <%= link_to 'Scuola in chiaro', transparency_path, class: 'link' %>
     </div>
     <div class="documents-list__item">
       <%= image_tag 'document-icon.png', class: 'document-icon' %>
-      <%= link_to 'Calendario giorni festivi', 'https://www.cortecostituzionale.it/documenti/download/pdf/Costituzione_della_Repubblica_italiana.pdf', class: 'link' %>
+      <%= link_to 'Calendario giorni festivi', dato.homepage.holiday_calendar.url, class: 'link' %>
     </div>
   </div>
 </section>

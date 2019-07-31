@@ -12,6 +12,8 @@ configure :development do
   activate :livereload
 end
 
+activate :directory_indexes
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -50,41 +52,6 @@ projects = [
     slug: 'progetto_4',
   },
 ]
-schools = [
-  {
-    slug: 'san_giorgio',
-    label: 'San Giorgio',
-    cover: 'example1.jpg',
-  },
-  {
-    slug: 'san_giuseppe',
-    label: 'San Giuseppe',
-    cover: 'example2.jpg',
-  },
-  {
-    slug: 'san_vincenzo',
-    label: 'San Vincenzo',
-    cover: 'example3.jpg',
-  },
-]
-events = [
-  {
-    slug: 'evento-1',
-    date: '2019-07-12',
-    title: 'Evento 1',
-    icon_path: 'peda-icon.jpg',
-    category: 'Pedagogico',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    slug: 'evento-2',
-    date: '2019-07-16',
-    title: 'Evento 2',
-    icon_path: 'amm-icon.png',
-    category: 'Amministrazione',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-]
 explorer_events = [
   {
     slug: 'evento-1',
@@ -111,151 +78,146 @@ explorer_events = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 ]
-documents = [
-  {
-    url: 'documento-1',
-    date: '2019-07-12',
-    update: '2019-08-01',
-    title: 'Documento 1',
-    icon_path: 'document-icon.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    url: 'documento-2',
-    date: '2019-07-12',
-    update: '2019-08-01',
-    title: 'Documento 2',
-    icon_path: 'document-icon.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    url: 'documento-3',
-    date: '2019-07-12',
-    update: '2019-08-01',
-    title: 'Documento 3',
-    icon_path: 'document-icon.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    url: 'documento-4',
-    date: '2019-07-12',
-    update: '2019-08-01',
-    title: 'Documento 4',
-    icon_path: 'document-icon.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-]
 
-schools.each do |school|
-  proxy(
-    "/scuole/#{school[:slug]}.html",
-    '/scuole/school.html',
-    locals: {
-      school: school,
-      projects: projects,
-    },
-    ignore: true,
-  )
-  proxy(
-    "/scuole/#{school[:slug]}/eventi.html",
-    '/scuole/events.html',
-    locals: {
-      school: school,
-      events: events,
-    },
-    ignore: true,
-  )
-  events.each do |event|
+dato.tap do |dato|
+  dato.schools.each do |school|
     proxy(
-      "/scuole/#{school[:slug]}/eventi/#{event[:slug]}.html",
-      '/scuole/event.html',
+      "/scuole/#{school.slug}/index.html",
+      '/scuole/school.html',
       locals: {
         school: school,
-        event: event,
       },
       ignore: true,
     )
-  end
-  proxy(
-    "/scuole/#{school[:slug]}/progetti_in_corso.html",
-    '/scuole/projects.html',
-    locals: {
-      school: school,
-      projects: projects,
-    },
-    ignore: true,
-  )
-
-  projects.each do |project|
     proxy(
-      "/scuole/#{school[:slug]}/progetti_in_corso/#{project[:slug]}.html",
-      '/scuole/project.html',
+      "/scuole/#{school.slug}/eventi/index.html",
+      '/scuole/events.html',
       locals: {
         school: school,
-        project: project,
       },
       ignore: true,
     )
+    school.events.each do |event|
+      proxy(
+        "/scuole/#{school.slug}/eventi/#{event.slug}/index.html",
+        '/scuole/event.html',
+        locals: {
+          school: school,
+          event: event,
+        },
+        ignore: true,
+      )
+    end
+    proxy(
+      "/scuole/#{school[:slug]}/progetti/index.html",
+      '/scuole/projects.html',
+      locals: {
+        school: school,
+      },
+      ignore: true,
+    )
+
+    school.projects.each do |project|
+      proxy(
+        "/scuole/#{school[:slug]}/progetti/#{project.slug}/index.html",
+        '/scuole/project.html',
+        locals: {
+          school: school,
+          project: project,
+        },
+        ignore: true,
+      )
+    end
   end
 end
 
 proxy(
-  "/esploratori/calendario.html",
-  '/explorer/calendar.html',
-  locals: {
-    explorer_events: explorer_events,
-  },
+  "/scuole/index.html",
+  '/schools.html',
   ignore: true,
 )
-explorer_events.each do |event|
+
+proxy(
+  "/esploratori/index.html",
+  '/exploratory.html',
+  ignore: true,
+)
+proxy(
+  "/esploratori/calendario/index.html",
+  '/exploratory/calendar.html',
+  ignore: true,
+)
+dato.exploratory.events.each do |event|
   proxy(
-    "/esploratori/calendario/#{event[:slug]}.html",
-    '/explorer/calendar/event.html',
+    "/esploratori/calendario/#{event.slug}/index.html",
+    '/exploratory/calendar/event.html',
     locals: {
       event: event,
     },
-      ignore: true
+    ignore: true
   )
 end
 
 proxy(
-  "/scuole_in_chiaro.html",
+  "/scuola_in_chiaro.html",
   '/school_in_clear.html',
-  locals: {
-    documents: documents,
-  },
   ignore: true,
 )
 
+helpers do
+  def format_date(date, format: '%Y-%m-%d')
+    date.strftime(format)
+  end
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
+  def thumbnail_url(image:)
+    "#{image.url}?w=200&h=200&fit=crop"
+  end
 
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
+  def present?(value)
+    value && value.strip != ''
+  end
 
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
+  def blank?(value)
+    !present?(value)
+  end
 
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
+  def schools_path
+    "/scuole"
+  end
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+  def school_path(school)
+    "#{schools_path}/#{school.slug}"
+  end
 
-# Build-specific configuration
-# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
+  def school_events_path(school)
+    "#{school_path(school)}/eventi"
+  end
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+  def school_event_path(school, event)
+    "#{school_events_path(school)}/#{event.slug}"
+  end
+
+  def school_projects_path(school)
+    "#{school_path(school)}/progetti"
+  end
+
+  def school_project_path(school, project)
+    "#{school_projects_path(school)}/#{project.slug}"
+  end
+
+  def exploratory_path
+    '/esploratori'
+  end
+
+  def exploratory_calendar_path
+    "#{exploratory_path}/calendario"
+  end
+
+  def exploratory_calendar_event_path(event)
+    "#{exploratory_calendar_path}/#{event.slug}"
+  end
+
+  def transparency_path
+    '/scuola_in_chiaro.html'
+  end
+end

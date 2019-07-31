@@ -20,8 +20,8 @@
         <%= image_tag '/images/logo.png', class: 'header-brand__logo' %>
         <%= link_to 'Scuole Parrocchiali Desio', '/', class: 'font-title link header-brand__link' %>
       </div>
-      <%= link_to 'Le scuole', '/le_scuole.html', class: 'font-title link header-link' %>
-      <%= link_to 'Esploratori', '/esploratori.html', class: 'font-title link header-link' %>
+      <%= link_to 'Le scuole', schools_path, class: 'font-title link header-link' %>
+      <%= link_to 'Esploratori', exploratory_path, class: 'font-title link header-link' %>
     </header>
     <main class="main">
       <div class="page-content">
@@ -31,12 +31,11 @@
     <footer>
       <div class="footer-wrapper">
         <p class="footer-item">
-          Via Conciliazione, 9 - 20832 Desio(MB)<br />
-          Tel./Fax 0362 622042
+          <%= dato.contact.address_footer %>
         </p>
-        <%= link_to 'materna.sangiuseppe@tiscali.it', 'mailto:materna.sangiuseppe@tiscali.it', class: 'footer-item' %>
-        <%= link_to 'Scuola in chiaro', '/scuole_in_chiaro.html', class: 'footer-item' %>
-        <%= link_to 'Calendario giorni festivi', 'https://www.cortecostituzionale.it/documenti/download/pdf/Costituzione_della_Repubblica_italiana.pdf', class: 'footer-item' %>
+        <%= link_to dato.contact.email, "mailto:#{dato.contact.email}", class: 'footer-item' %>
+        <%= link_to 'Scuola in chiaro', transparency_path, class: 'footer-item' %>
+        <%= link_to 'Calendario giorni festivi', dato.homepage.holiday_calendar.url, class: 'footer-item' %>
       </div>
     </footer>
   </body>

@@ -1,15 +1,14 @@
 <section class="grid-container">
   <ul class="breadcrumbs">
     <li><%= link_to 'Home', '/' %></li>
-    <li><%= link_to 'Le scuole', schools_path %></li>
-    <li><%= link_to school.name, school_path(school) %></li>
-    <li><%= link_to 'Eventi', school_events_path(school) %></li>
-    <li><%= link_to event.name, school_event_path(school, event) %></li>
+    <li><%= link_to 'Esploratori', exploratory_path %></li>
+    <li><%= link_to 'Calendario', exploratory_calendar_path %></li>
+    <li><%= link_to event.name, exploratory_calendar_event_path(event) %></li>
   </ul>
 
   <div class="section-card">
     <div class="event-info">
-      <p class="event-info__date"><%= format_date(event.date) %></p>
+      <p class="event-info__date"><%= event.date %></p>
       <div class="event-info__category">
         <%= image_tag event.category.image.url, class: 'document-icon' %>
         <p class="event-info__category__label"><%= event.category.name %></p>

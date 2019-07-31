@@ -1,16 +1,15 @@
 <section class="grid-container">
   <ul class="breadcrumbs">
     <li><%= link_to 'Home', '/' %></li>
-    <li><%= link_to 'Le scuole', schools_path %></li>
-    <li><%= link_to school.name, school_path(school) %></li>
-    <li><%= link_to 'Eventi', school_events_path(school) %></li>
+    <li><%= link_to 'Esploratori', exploratory_path %></li>
+    <li><%= link_to 'Calendario', exploratory_calendar_path %></li>
   </ul>
 
-  <h1 class="title">Eventi</h1>
+  <h1 class="title">Calendario Esploratori</h1>
   <ol class="timeline">
-    <% school.events.each do |event| %>
+    <% dato.exploratory.events.each do |event| %>
     <li>
-      <span class="timeline__label"><%= format_date(event.date) %></span>
+      <span class="timeline__label"><%= event.date %></span>
       <div class="section-card timeline__card">
         <h1 class="section-card__title text-center font-title"><%= event.name %></h1>
         <%= image_tag event.category.image.url, class: 'timeline__icon' %>
@@ -25,9 +24,9 @@
               else
                 words[0..words_limit].join(' ') + ' [..]'
               end
-             %>
+            %>
           </p>
-          <%= link_to 'Scopri', school_event_path(school, event), class:'button button--card-action' %>
+          <%= link_to 'Scopri', exploratory_calendar_event_path(event), class:'button button--card-action' %>
         </div>
       </div>
     </li>

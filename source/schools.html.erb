@@ -1,0 +1,15 @@
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/', class: 'breadcrumbs__home' %></li>
+    <li><%= link_to 'Le scuole', schools_path, class: 'breadcrumbs__le-scuole' %></li>
+  </ul>
+
+  <% dato.schools.each do |item| %>
+    <section class="school-card">
+      <%= link_to item.name, school_path(item), class: 'link font-title' %>
+      <% link_to school_path(item) do %>
+        <%= image_tag item.cover.url, class: 'cover-image' %>
+      <% end %>
+    </section>
+  <% end %>
+</section>
