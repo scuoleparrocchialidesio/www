@@ -7,7 +7,7 @@
   <h1 class="title">Esploratori</h1>
 
   <h1 class="title">In cosa consistono?</h1>
-  <p class="text"><%= dato.exploratory.description %></p>
+  <div class="rich-text"><%= dato.exploratory.description %></div>
 
   <div class="gallery">
     <% dato.exploratory.gallery.each do |photo| %>
@@ -28,13 +28,13 @@
       <h1 class="section-card__title font-title">Il team</h1>
       <%= image_tag dato.exploratory.team.photo.url, class: 'cover-image' %>
       <div class="section-card__body">
-        <p class="text"><%= dato.exploratory.team.description %></p>
+        <div class="rich-text"><%= dato.exploratory.team.description %></div>
       </div>
     </div>
     <div class="section-card">
       <h1 class="section-card__title font-title">Calendario</h1>
       <div class="section-card__body">
-        <p class="text"><%= dato.exploratory.calendar_description %></p>
+        <div class="rich-text"><%= dato.exploratory.calendar_description %></div>
         <%= link_to 'Scopri', exploratory_calendar_path, class:'button button--card-action' %>
       </div>
     </div>

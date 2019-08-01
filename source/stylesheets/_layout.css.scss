@@ -3,12 +3,13 @@
   align-items: start;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
+  grid-gap: 2rem;
 }
 
 .main {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, $content-width) minmax(0, 1fr);
-  margin: 2rem;
+  margin: 0 2rem;
 }
 
 .page-content {

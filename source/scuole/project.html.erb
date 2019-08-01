@@ -11,7 +11,7 @@
     <h1 class="section-card__title font-title"><%= project.title %></h1>
     <%= image_tag project.cover.url, class: 'cover-image' %>
     <p class="section-card__date"><%= project.date %></p>
-    <p class="text"><%= project.description %></p>
+    <div class="rich-text"><%= project.description %></div>
   </div>
 
   <div class="gallery">

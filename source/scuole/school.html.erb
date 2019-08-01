@@ -9,7 +9,7 @@
   <h1 class="title">
     Storia
   </h1>
-  <p class="text"><%= school.description %></p>
+  <div class="rich-text"><%= school.description %></div>
 
   <div class="gallery">
     <% school.gallery.each do |photo| %>
@@ -44,27 +44,27 @@
   <div class="team">
     <h1 class="title">Il team</h1>
     <%= image_tag school.team.photo.url, class: 'cover-image' %>
-    <p class="text"><%= school.team.description %></p>
+    <div class="rich-text"><%= school.team.description %></div>
   </div>
   <div class="card-container">
     <div class="section-card">
       <h1 class="section-card__title font-title">Progetti in corso</h1>
       <div class="section-card__body">
-        <p class="text"><%= school.projects_description %></p>
+        <div class="rich-text"><%= school.projects_description %></div>
         <%= link_to 'Scopri', school_projects_path(school), class: 'button button--card-action' %>
       </div>
     </div>
     <div class="section-card">
       <h1 class="section-card__title font-title">Eventi</h1>
       <div class="section-card__body">
-        <p class="text"><%= school.events_description %></p>
+        <div class="rich-text"><%= school.events_description %></div>
         <%= link_to 'Scopri', school_events_path(school), class: 'button button--card-action' %>
       </div>
     </div>
   </div>
   <div class="contact-card">
     <h1 class="title">Contatti</h1>
-    <p class="text"><%= school.contacts %></p>
+    <div class="rich-text"><%= school.contacts %></div>
   </div>
 
   <div class="documents-list">
