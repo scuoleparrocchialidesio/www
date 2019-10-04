@@ -26,21 +26,23 @@
     <% end %>
   </div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Orari</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% school.timetable.timetable_row.each do |row| %>
+  <% if school.timetable %>
+    <table class="table">
+      <thead>
         <tr>
-          <td><%= row.interval %></td>
-          <td><%= row.activity %></td>
+          <th>Orari</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% school.timetable.timetable_row.each do |row| %>
+          <tr>
+            <td><%= row.interval %></td>
+            <td><%= row.activity %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
   <div class="team">
     <h1 class="title">Il team</h1>
     <%= image_tag school.team.photo.url, class: 'cover-image' %>
