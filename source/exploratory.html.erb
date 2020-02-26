@@ -24,13 +24,15 @@
     <% end %>
   </div>
   <div class="card-container">
-    <div class="section-card">
-      <h1 class="section-card__title font-title">Il team</h1>
-      <%= image_tag dato.exploratory.team.photo.url, class: 'cover-image' %>
-      <div class="section-card__body">
-        <div class="rich-text"><%= dato.exploratory.team.description %></div>
+    <% if dato.exploratory.team %>
+      <div class="section-card">
+        <h1 class="section-card__title font-title">Il team</h1>
+        <%= image_tag dato.exploratory.team.photo.url, class: 'cover-image' %>
+        <div class="section-card__body">
+          <div class="rich-text"><%= dato.exploratory.team.description %></div>
+        </div>
       </div>
-    </div>
+    <% end %>
     <div class="section-card">
       <h1 class="section-card__title font-title">Calendario</h1>
       <div class="section-card__body">
