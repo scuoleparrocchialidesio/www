@@ -1,20 +1,22 @@
-<ul class="breadcrumbs">
-  <li><%= link_to 'Home', '/' %></li>
-  <li><%= link_to 'Le scuole', schools_path %></li>
-  <li><%= link_to school.name, school_path(school) %></li>
-  <li><%= link_to 'Progetti in corso', school_projects_path(school) %></li>
-</ul>
+<section class="grid-container">
+  <ul class="breadcrumbs">
+    <li><%= link_to 'Home', '/' %></li>
+    <li><%= link_to 'Le scuole', schools_path %></li>
+    <li><%= link_to school.name, school_path(school) %></li>
+    <li><%= link_to 'Progetti in corso', school_projects_path(school) %></li>
+  </ul>
 
-<div class="card-container">
-  <% school.projects.each do |project| %>
-    <section class="section-card">
-      <%= image_tag project.cover.url, class:'section-card__cover' %>
-      <h1 class="section-card__title font-title"><%= project.title %></h1>
-      <p class="section-card__date"><%= format_date(project.date) %></p>
-      <div class="section-card__body">
-        <div class="rich-text"><%= project.description %></div>
-        <%= link_to 'Scopri il progetto', school_project_path(school, project), class: 'button button--card-action' %>
-      </div>
-    </section>
-  <% end %>
+  <div class="card-container">
+    <% school.projects.each do |project| %>
+      <section class="section-card">
+        <%= image_tag project.cover.url, class:'section-card__cover' %>
+        <h1 class="section-card__title font-title"><%= project.title %></h1>
+        <p class="section-card__date"><%= format_date(project.date) %></p>
+        <div class="section-card__body">
+          <div class="rich-text"><%= project.description %></div>
+          <%= link_to 'Scopri il progetto', school_project_path(school, project), class: 'button button--card-action' %>
+        </div>
+      </section>
+    <% end %>
+  </div>
 </div>

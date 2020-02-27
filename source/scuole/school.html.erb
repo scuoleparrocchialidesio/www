@@ -65,13 +65,33 @@
         <%= link_to 'Scopri', school_events_path(school), class: 'button button--card-action' %>
       </div>
     </div>
+    <% if school.transparency %>
+      <div class="section-card">
+        <h1 class="section-card__title font-title">Scuola in chiaro</h1>
+        <div class="section-card__body">
+          <%= link_to 'Scopri', school_transparency_path(school), class: 'button button--card-action' %>
+        </div>
+      </div>
+    <% end %>
   </div>
   <div class="contact-card">
     <h1 class="title">Contatti</h1>
-    <div class="rich-text"><%= school.contacts %></div>
+    <div>
+      <p><%= school.contacts.address %></p>
+      <p><%= school.contacts.phone %></p>
+      <p>
+        <%= link_to school.contacts.email, "mailto:#{school.contacts.email}", class: 'link' %>
+      </p>
+    </div>
   </div>
 
   <div class="documents-list">
+    <% if school.holiday_calendar %>
+      <div class="documents-list__item">
+        <%= image_tag 'document-icon.png', class: 'document-icon' %>
+        <%= link_to 'Calendario giorni festivi', school.holiday_calendar.url, class: 'link' %>
+      </div>
+    <% end %>
     <% school.links.each do |link| %>
       <div class="documents-list__item">
         <%= image_tag link.icon.image.url, class: 'document-icon' %>

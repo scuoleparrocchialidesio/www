@@ -1,12 +1,12 @@
 <section class="grid-container">
   <ul class="breadcrumbs">
     <li><%= link_to 'Home', '/' %></li>
-    <li><%= link_to 'Esploratori', exploratory_path %></li>
+    <li><%= link_to 'Offerta 0-3', exploratory_path %></li>
   </ul>
 
-  <h1 class="title">Esploratori</h1>
+  <h1 class="title">Offerta 0-3 anni</h1>
 
-  <h1 class="title">In cosa consistono?</h1>
+  <h1 class="title">In cosa consiste?</h1>
   <div class="rich-text"><%= dato.exploratory.description %></div>
 
   <div class="gallery">
@@ -33,12 +33,14 @@
         </div>
       </div>
     <% end %>
-    <div class="section-card">
-      <h1 class="section-card__title font-title">Calendario</h1>
-      <div class="section-card__body">
-        <div class="rich-text"><%= dato.exploratory.calendar_description %></div>
-        <%= link_to 'Scopri', exploratory_calendar_path, class:'button button--card-action' %>
+    <% if dato.exploratory.events.any? %>
+      <div class="section-card">
+        <h1 class="section-card__title font-title">Calendario</h1>
+        <div class="section-card__body">
+          <div class="rich-text"><%= dato.exploratory.calendar_description %></div>
+          <%= link_to 'Scopri', exploratory_calendar_path, class:'button button--card-action' %>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </section>

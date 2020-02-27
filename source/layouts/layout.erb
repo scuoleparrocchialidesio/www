@@ -21,7 +21,7 @@
         <%= link_to 'Scuole Parrocchiali Desio', '/', class: 'font-title link header-brand__link' %>
       </div>
       <%= link_to 'Le scuole', schools_path, class: 'font-title link header-link' %>
-      <%= link_to 'Esploratori', exploratory_path, class: 'font-title link header-link' %>
+      <%= link_to 'Offerta 0-3', exploratory_path, class: 'font-title link header-link' %>
     </header>
     <main class="main">
       <div class="page-content">
@@ -30,12 +30,12 @@
     </main>
     <footer>
       <div class="footer-wrapper">
-        <p class="footer-item">
-          <%= dato.contact.address_footer %>
-        </p>
-        <%= link_to dato.contact.email, "mailto:#{dato.contact.email}", class: 'footer-item' %>
-        <%= link_to 'Scuola in chiaro', transparency_path, class: 'footer-item' %>
-        <%= link_to 'Calendario giorni festivi', dato.homepage.holiday_calendar.url, class: 'footer-item' %>
+        <% dato.schools.each do |school| %>
+          <% if school.contacts %>
+            <%= link_to school.contacts.email, "mailto:#{school.contacts.email}", class: 'footer-item' %>
+            <div class="footer-item"><%= school.contacts.address %></div>
+          <% end %>
+        <% end %>
       </div>
     </footer>
   </body>

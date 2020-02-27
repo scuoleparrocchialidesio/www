@@ -71,6 +71,15 @@ dato.tap do |dato|
         ignore: true,
       )
     end
+    proxy(
+      "/scuole/#{school[:slug]}/scuola_in_chiaro/index.html",
+      '/scuole/school_in_clear.html',
+      locals: {
+        school: school,
+      },
+      ignore: true,
+    )
+
   end
 end
 
@@ -100,12 +109,6 @@ dato.exploratory.events.each do |event|
     ignore: true
   )
 end
-
-proxy(
-  "/scuola_in_chiaro.html",
-  '/school_in_clear.html',
-  ignore: true,
-)
 
 helpers do
   def format_date(date, format: '%Y-%m-%d')
@@ -144,6 +147,10 @@ helpers do
     "#{school_path(school)}/progetti"
   end
 
+  def school_transparency_path(school)
+    "#{school_path(school)}/scuola_in_chiaro"
+  end
+
   def school_project_path(school, project)
     "#{school_projects_path(school)}/#{project.slug}"
   end
@@ -158,9 +165,5 @@ helpers do
 
   def exploratory_calendar_event_path(event)
     "#{exploratory_calendar_path}/#{event.slug}"
-  end
-
-  def transparency_path
-    '/scuola_in_chiaro.html'
   end
 end

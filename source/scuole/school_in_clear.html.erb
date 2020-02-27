@@ -1,13 +1,15 @@
 <section class="grid-container">
   <ul class="breadcrumbs">
     <li><%= link_to 'Home', '/' %></li>
-    <li><%= link_to 'Scuole in chiaro', transparency_path %></li>
+    <li><%= link_to 'Le scuole', schools_path %></li>
+    <li><%= link_to school.name, school_path(school) %></li>
+    <li><%= link_to 'Scuola in chiaro', school_transparency_path(school) %></li>
   </ul>
 
   <h1 class="title">Scuola in chiaro</h1>
 
   <div class="card-container">
-    <% dato.transparency.documents.each do |document| %>
+    <% school.transparency.documents.each do |document| %>
       <section class="section-card">
         <%= image_tag 'document-icon.png', class:'document-icon' %>
         <h1 class="section-card__title font-title"><%= document.name %></h1>
