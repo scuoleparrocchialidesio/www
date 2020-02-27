@@ -32,6 +32,7 @@ dato.tap do |dato|
       },
       ignore: true,
     )
+
     proxy(
       "/scuole/#{school.slug}/eventi/index.html",
       '/scuole/events.html',
@@ -40,6 +41,7 @@ dato.tap do |dato|
       },
       ignore: true,
     )
+
     school.events.each do |event|
       proxy(
         "/scuole/#{school.slug}/eventi/#{event.slug}/index.html",
@@ -51,8 +53,9 @@ dato.tap do |dato|
         ignore: true,
       )
     end
+
     proxy(
-      "/scuole/#{school[:slug]}/progetti/index.html",
+      "/scuole/#{school.slug}/progetti/index.html",
       '/scuole/projects.html',
       locals: {
         school: school,
@@ -62,7 +65,7 @@ dato.tap do |dato|
 
     school.projects.each do |project|
       proxy(
-        "/scuole/#{school[:slug]}/progetti/#{project.slug}/index.html",
+        "/scuole/#{school.slug}/progetti/#{project.slug}/index.html",
         '/scuole/project.html',
         locals: {
           school: school,
@@ -71,8 +74,9 @@ dato.tap do |dato|
         ignore: true,
       )
     end
+
     proxy(
-      "/scuole/#{school[:slug]}/scuola_in_chiaro/index.html",
+      "/scuole/#{school.slug}/scuola_in_chiaro/index.html",
       '/scuole/school_in_clear.html',
       locals: {
         school: school,
@@ -105,6 +109,7 @@ proxy(
   '/exploratory.html',
   ignore: true,
 )
+
 proxy(
   "/esploratori/calendario/index.html",
   '/exploratory/calendar.html',

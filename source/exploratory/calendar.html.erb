@@ -20,7 +20,7 @@
               words_limit = 30
               words = event.description.split(' ')
               if words.length <= words_limit
-                event[:description]
+                event.description
               else
                 words[0..words_limit].join(' ') + ' [..]'
               end
