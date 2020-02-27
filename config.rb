@@ -81,6 +81,17 @@ dato.tap do |dato|
     )
 
   end
+
+  ignore "/exploratory/calendar/event.html"
+
+  dato.exploratory.events.each do |event|
+    proxy(
+      "/esploratori/calendario/#{event.slug}/index.html",
+      '/exploratory/calendar/event.html',
+      locals: { event: event },
+      ignore: true
+    )
+  end
 end
 
 proxy(
@@ -99,16 +110,6 @@ proxy(
   '/exploratory/calendar.html',
   ignore: true,
 )
-dato.exploratory.events.each do |event|
-  proxy(
-    "/esploratori/calendario/#{event.slug}/index.html",
-    '/exploratory/calendar/event.html',
-    locals: {
-      event: event,
-    },
-    ignore: true
-  )
-end
 
 helpers do
   def format_date(date, format: '%Y-%m-%d')
