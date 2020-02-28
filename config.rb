@@ -22,6 +22,10 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+ignore "/scuole/event.html"
+ignore "/scuole/project.html"
+ignore "/exploratory/calendar/event.html"
+
 dato.tap do |dato|
   dato.schools.each do |school|
     proxy(
@@ -85,8 +89,6 @@ dato.tap do |dato|
     )
 
   end
-
-  ignore "/exploratory/calendar/event.html"
 
   dato.exploratory.events.each do |event|
     proxy(
